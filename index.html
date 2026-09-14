@@ -428,9 +428,84 @@ h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);lin
   .band,.buehne{padding:14pt 0;background:#fff!important;color:#000!important}
   .band-tief h2,.band-tief h3,h1{color:#000!important}
 }
+
+/* --- Messe-Banner (temporaer, siehe Block in <body>) --- */
+/* Startwert im CSS, NICHT erst per JS: sonst liegt der Kopf beim ersten Frame
+   unter dem Banner (am gerenderten Bild gefangen) — und ohne JavaScript dauerhaft. */
+:root{--zp-h:56px}
+@media(max-width:34rem){:root{--zp-h:76px}}
+.kopf{top:var(--zp-h)}
+body{padding-top:var(--zp-h)}
+.zp-band{position:fixed;top:0;left:0;right:0;z-index:70;
+  background:radial-gradient(120% 200% at 74% 0%, #b880f0 0%, transparent 54%),
+             linear-gradient(120deg,#52498a 0%,#635e8e 60%,#3b3466 100%);
+  color:#fff;font-size:.92rem;line-height:1.35}
+.zp-link{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;
+  width:min(100% - 4.4rem,72rem);margin-inline:auto;
+  padding:.72rem 0;color:#fff;text-decoration:none}
+.zp-motto{font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  font-size:.82rem;white-space:nowrap;
+  border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:.24rem .7rem}
+.zp-x{font-weight:300;opacity:.75}
+.zp-text{flex:1 1 16rem;min-width:0}
+.zp-text strong{font-weight:700}
+.zp-pfeil{font-size:1.1rem;opacity:.85}
+.zp-link:hover .zp-pfeil,.zp-link:focus .zp-pfeil{opacity:1;transform:translateX(3px)}
+.zp-pfeil{transition:transform .16s ease,opacity .16s ease}
+.zp-zu{position:absolute;right:.7rem;top:50%;transform:translateY(-50%);
+  background:none;border:0;color:#e6d8ff;font-size:1.3rem;line-height:1;
+  cursor:pointer;padding:.3rem .5rem;border-radius:6px}
+.zp-zu:hover{color:#fff;background:rgba(255,255,255,.14)}
+@media(max-width:34rem){
+  .zp-link{padding:.65rem 0;gap:.55rem}
+  .zp-text{font-size:.86rem}
+  .zp-pfeil{display:none}
+}
 </style>
 </head>
 <body>
+
+<!-- ============================================================
+     MESSE-BANNER · Zukunft Personal Europe, 15.–17.09.2026
+     Temporär. Blendet sich per JS nach dem 18.09. selbst aus; ohne
+     JavaScript bleibt er stehen und muss von Hand entfernt werden
+     (diesen Block löschen — er hängt an nichts anderem).
+     Führt bewusst KEIN Veranstalter-Logo: Jay ist dort Besucher,
+     nicht Aussteller; ein fremdes Logo würde eine Verbindung
+     behaupten, die es nicht gibt. Nur Farbwelt und Motto-Zitat.
+     ============================================================ -->
+<aside class="zp-band" id="zp-band" aria-label="Hinweis zur Messe Zukunft Personal">
+  <a class="zp-link" href="team-human-ai.html">
+    <span class="zp-motto">Team Human <span class="zp-x">×</span> AI</span>
+    <span class="zp-text"><strong>Zukunft&nbsp;Personal, Köln.</strong> Wir haben uns dort getroffen? Hier ist die Minute dazu.</span>
+    <span class="zp-pfeil" aria-hidden="true">→</span>
+  </a>
+  <button class="zp-zu" type="button" aria-label="Hinweis schließen">×</button>
+</aside>
+<script>
+(function(){
+  var b=document.getElementById('zp-band');
+  if(!b) return;
+  // nach der Messe verschwindet er von selbst
+  if(new Date() >= new Date('2026-09-18T00:00:00')){ b.remove(); return; }
+  // Hoehe MESSEN statt raten: auf dem Handy bricht der Banner auf zwei Zeilen,
+  // ein fester Wert wuerde den Kopf dort ueberlappen lassen.
+  function hoehe(){
+    document.documentElement.style.setProperty('--zp-h', b.offsetHeight+'px');
+  }
+  function weg(){
+    b.remove();
+    document.documentElement.style.setProperty('--zp-h','0px');
+  }
+  try{ if(sessionStorage.getItem('zp-band-zu')){ weg(); return; } }catch(e){}
+  hoehe();
+  addEventListener('resize',hoehe);
+  b.querySelector('.zp-zu').addEventListener('click',function(){
+    weg();
+    try{ sessionStorage.setItem('zp-band-zu','1'); }catch(e){}
+  });
+})();
+</script>
 
 <header class="kopf" id="kopf">
   <a class="marke" href="#oben" aria-label="AIVantum — zur Startseite">
@@ -473,7 +548,7 @@ h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);lin
             <li>Ein Werkzeug wird ausgerollt, die Nutzung versandet nach sechs Wochen.</li>
             <li>Die Motivierten bauen im Stillen etwas, das niemand sonst kennt.</li>
             <li>Führungskräfte sollen KI vorleben, ohne selbst je damit gearbeitet zu haben.</li>
-            <li>Es gibt eine Richtlinie, aber keine Antwort auf „darf ich das hier reinkopieren?".</li>
+            <li>Es gibt eine Richtlinie, aber keine Antwort auf „darf ich das hier reinkopieren?“.</li>
             <li>Erfolg wird in Lizenzen gemessen, nicht in veränderter Arbeit.</li>
           </ul>
         </div>
@@ -779,7 +854,7 @@ h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);lin
         </details>
         <details class="einwand">
           <summary>Meine Leute haben Angst, dass ihr Job wegrationalisiert wird.</summary>
-          <p>Das ist die häufigste Sorge im Haus, und sie verschwindet nicht dadurch, dass man sie nicht anspricht. Wir arbeiten offen damit: In der Befähigung sind es die Mitarbeitenden selbst, die entscheiden, welche ihrer Aufgaben sie abgeben wollen — nicht wir und nicht die Führung. Wer erlebt, dass er die lästigen Teile loswird und nicht die interessanten, hört auf, sich zu wehren. Wo Stellen tatsächlich zur Debatte stehen, sagen wir es der Führung deutlich, statt es hinter „Effizienz" zu verstecken.</p>
+          <p>Das ist die häufigste Sorge im Haus, und sie verschwindet nicht dadurch, dass man sie nicht anspricht. Wir arbeiten offen damit: In der Befähigung sind es die Mitarbeitenden selbst, die entscheiden, welche ihrer Aufgaben sie abgeben wollen — nicht wir und nicht die Führung. Wer erlebt, dass er die lästigen Teile loswird und nicht die interessanten, hört auf, sich zu wehren. Wo Stellen tatsächlich zur Debatte stehen, sagen wir es der Führung deutlich, statt es hinter „Effizienz“ zu verstecken.</p>
         </details>
         <details class="einwand">
           <summary>Kriegen wir am Ende wieder nur einen Foliensatz?</summary>
