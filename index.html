@@ -486,8 +486,10 @@ body{padding-top:var(--zp-h)}
 (function(){
   var b=document.getElementById('zp-band');
   if(!b) return;
-  // nach der Messe verschwindet er von selbst
-  if(new Date() >= new Date('2026-09-18T00:00:00')){ b.remove(); return; }
+  // Auslauf 30.09. statt 18.09. (Jay-Freigabe 16.09.): das Messe-Video kommt NACH der Messe,
+  // also am 18.09. — ein Banner, der genau dann verschwindet, schliesst den Weg zur Seite
+  // in dem Moment, in dem sie gebraucht wird.
+  if(new Date() >= new Date('2026-09-30T00:00:00')){ b.remove(); return; }
   // Hoehe MESSEN statt raten: auf dem Handy bricht der Banner auf zwei Zeilen,
   // ein fester Wert wuerde den Kopf dort ueberlappen lassen.
   function hoehe(){
