@@ -8,3 +8,5 @@ ZONEN-UMZUG.md
 zwilling-vergleich.py
 # Sicherungen aus Umbau-Läufen: nie veröffentlichen
 _alt/
+# Entwürfe von Lesen-Seiten: nie veröffentlichen (Freigabe = umbenennen nach <slug>.html)
+*.entwurf.html
