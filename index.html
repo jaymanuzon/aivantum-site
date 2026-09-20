@@ -533,6 +533,30 @@ body{padding-top:var(--zp-h)}
 .fuss-einstiege span{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
 .fuss-einstiege a{font-weight:600;letter-spacing:.01em}
 @media (max-width:520px){ .fuss-einstiege{flex-direction:column;align-items:flex-start;gap:10px} }
+
+/* ---------- Sticker unter dem Claim (TOMO-STICKER-2026-09-20) ---------- */
+.sticker-zeile{margin-top:30px;line-height:1}
+.sticker{display:inline-flex;align-items:center;gap:12px;padding:9px 18px 9px 9px;border-radius:14px;
+  background:var(--creme);color:var(--tinte);text-decoration:none;font-size:16px;line-height:1.25;
+  transform:rotate(-2.2deg);transform-origin:12% 50%;
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 30px rgba(0,0,0,.38),0 2px 6px rgba(0,0,0,.28);
+  transition:transform .35s var(--kurve),box-shadow .35s var(--kurve)}
+.sticker:hover,.sticker:focus-visible{transform:rotate(0deg) translateY(-2px);
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 20px 38px rgba(0,0,0,.42),0 3px 8px rgba(0,0,0,.3)}
+.sticker-neu{display:inline-block;padding:7px 11px 6px;border-radius:9px;background:var(--akzent);color:var(--creme);
+  font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transform:rotate(-3deg)}
+.sticker b{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:-.005em;margin-right:2px}
+.sticker-mehr{color:var(--tinte-weich)}
+.sticker-pfeil{color:var(--akzent);font-weight:700;transition:transform .35s var(--kurve)}
+.sticker:hover .sticker-pfeil{transform:translateX(4px)}
+.sticker-zeile + .unterzeile{margin-top:24px}
+@media (max-width:34rem){
+  .sticker-zeile{margin-top:24px}
+  .sticker{font-size:15px;gap:10px;padding:8px 14px 8px 8px}
+  .sticker b{font-size:21px}
+  .sticker-mehr{display:none}
+}
+@media (prefers-reduced-motion:reduce){.sticker,.sticker-pfeil{transition:none}}
 </style>
 </head>
 <body>
@@ -590,7 +614,7 @@ body{padding-top:var(--zp-h)}
     <img class="marke-hell" src="assets/aivantum-lockup-creme.png" alt="AIVantum" width="972" height="200">
     <img class="marke-dunkel" src="assets/aivantum-lockup-tinte.png" alt="" aria-hidden="true" width="972" height="200">
   </a>
-  <details class="kopf-wege"><summary>Einstiege</summary><div class="kopf-panel"><a href="https://restart.aivantum.com/"><b>Team im Umbruch</b><small>Reorg, neue Rolle, neues Team: sieben Schritte und ein kurzer Selbst-Check, kostenfrei.</small><span class="adresse">aivantum.com/restart</span></a><a href="https://entry.aivantum.com/"><b>Hochschule, Verein, Stiftung</b><small>Den Nachwuchs auf das Niveau vorbereiten, das die erste Stelle mit KI heute verlangt.</small><span class="adresse">aivantum.com/entry</span></a><a href="https://tomo.aivantum.com/"><b>Eure eigene KI-Lösung</b><small>Vom einzelnen Formular bis zum eigenen lernenden System. Gemeinsam entwickelt, bei euch, für euch.</small><span class="adresse">tomo.aivantum.com</span></a></div></details>
+  <details class="kopf-wege"><summary>Einstiege</summary><div class="kopf-panel"><a href="https://tomo.aivantum.com/"><b>Eure eigene KI-Lösung</b><small>Vom einzelnen Formular bis zum eigenen lernenden System. Gemeinsam entwickelt, bei euch, für euch.</small><span class="adresse">tomo.aivantum.com</span></a><a href="https://restart.aivantum.com/"><b>Team im Umbruch</b><small>Reorg, neue Rolle, neues Team: sieben Schritte und ein kurzer Selbst-Check, kostenfrei.</small><span class="adresse">aivantum.com/restart</span></a><a href="https://entry.aivantum.com/"><b>Hochschule, Verein, Stiftung</b><small>Den Nachwuchs auf das Niveau vorbereiten, das die erste Stelle mit KI heute verlangt.</small><span class="adresse">aivantum.com/entry</span></a></div></details>
   <a class="kopf-knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten sprechen</a>
 </header>
 
@@ -601,6 +625,7 @@ body{padding-top:var(--zp-h)}
     <div class="buehne-text">
       <p class="augenbraue auf">KI-Kompetenz für Organisationen</p>
       <h1 class="auf">Werkzeuge einführen<br>ist einfach.<br><em>Anders arbeiten nicht.</em></h1>
+      <p class="sticker-zeile auf" data-bis="2026-10-31"><a class="sticker" href="https://tomo.aivantum.com/"><span class="sticker-neu">Neu</span><span><b>Tomo ist da.</b> <span class="sticker-mehr">Eure eigene KI-Lösung</span></span><span class="sticker-pfeil" aria-hidden="true">&rarr;</span></a></p>
       <p class="unterzeile auf">Die Lizenzen sind gekauft, die Schulung ist gelaufen — und am Montagmorgen arbeitet trotzdem jeder weiter wie vorher. Genau dort setzen wir an: erst messen, was in deiner Organisation heute wirklich passiert, dann befähigen, dann verankern.</p>
       <div class="knopf-reihe auf">
         <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">Termin auswählen <span>&rarr;</span></a>
@@ -1219,5 +1244,8 @@ body{padding-top:var(--zp-h)}
 })();
 </script>
 <!-- TOMO-EINSTIEG-2026-09-20 -->
+
+<script>/* TOMO-STICKER-2026-09-20 */(function(){var e=document.querySelector('.sticker-zeile[data-bis]');if(e&&new Date()>new Date(e.getAttribute('data-bis')+'T23:59:59'))e.remove();})();</script>
+<!-- TOMO-STICKER-2026-09-20 -->
 </body>
 </html>
