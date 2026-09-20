@@ -6,3 +6,5 @@ UEBERGABE-*.md
 ZONEN-UMZUG.md
 *.zone
 zwilling-vergleich.py
+# Sicherungen aus Umbau-Läufen: nie veröffentlichen
+_alt/
