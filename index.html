@@ -58,1121 +58,841 @@
 }
 </script>
 <style>
-/* Selbst gehostete Schriften (SIL OFL 1.1) — lokal mitgeliefert,
-   damit beim Seitenaufruf KEINE Verbindung zu Google entsteht (DSGVO). */
-/* Selbst gehostete Schriften (SIL OFL 1.1) — lokal mitgeliefert,
-   damit beim Seitenaufruf KEINE Verbindung zu Google entsteht (DSGVO). */
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(fonts/cormorant-italic-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(fonts/cormorant-italic-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(fonts/cormorant-italic-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(fonts/cormorant-italic-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(fonts/cormorant-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(fonts/cormorant-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(fonts/cormorant-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(fonts/cormorant-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(fonts/hanken-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(fonts/hanken-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(fonts/hanken-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(fonts/hanken-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(fonts/hanken-latin-ext.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(fonts/hanken-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* Stand 23.09.2026: Relaunch nach Konzept Runde 2 (Vantum HQ/2026-09-23-landingpage-konzept). */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cormorant-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/cormorant-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hanken-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+A720-A7FF}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
 :root{
-  --tief:#111b2e;          /* dominante dunkle Fläche */
-  --tief-3:#0d1626;        /* zweite, tiefere Stufe — trennt zwei dunkle Bänder in Folge */
-  --tief-2:#1a2942;        /* zweite dunkle Stufe */
-  --creme:#fbf7ef;
-  --creme-2:#f2ecdf;
-  --tinte:#16233c;
-  --tinte-weich:#5a6580;
-  --akzent:#1a6259;        /* Akzent auf hellem Grund */
-  --akzent-hell:#4aa79a;   /* Akzent auf dunklem Grund */
-  --linie:#e7dfcf;
-  --linie-dunkel:rgba(251,247,239,.15);
+  --tief:#111b2e; --tief-2:#1a2942; --tief-3:#0d1626;
+  --creme:#fbf7ef; --creme-2:#f2ecdf;
+  --tinte:#16233c; --tinte-weich:#5a6580;
+  --akzent:#1a6259; --akzent-hell:#4aa79a;
+  --linie:#e7dfcf; --linie-dunkel:rgba(251,247,239,.15);
   --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
   --grotesk:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-  --rand:clamp(22px,5vw,88px);
+  --rand:clamp(20px,5vw,88px);
   --kurve:cubic-bezier(.2,.7,.3,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--creme);color:var(--tinte);font-family:var(--grotesk);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body{background:var(--creme);color:var(--tinte);font-family:var(--grotesk);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 :focus-visible{outline:2.5px solid var(--akzent-hell);outline-offset:3px;border-radius:2px}
 
-/* ---------- Kopfleiste ---------- */
-.kopf{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;justify-content:space-between;
-  gap:16px;padding:16px var(--rand);transition:background .4s var(--kurve),box-shadow .4s var(--kurve)}
-.kopf::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(17,27,46,.62) 0%,rgba(17,27,46,.28) 60%,transparent 100%);
-  transition:opacity .4s var(--kurve)}
-.kopf.fest::before{opacity:0}
-.kopf.fest{background:rgba(251,247,239,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--linie)}
-/* Wortbildmarke aus der Gemini-Quelle, freigestellt — zwei Farbfassungen,
-   weil die Kopfleiste beim Scrollen von der dunklen Bühne auf Creme kippt. */
-.marke{position:relative;display:block;height:30px;width:146px;flex:0 0 auto;text-decoration:none}
-.marke img{position:absolute;left:0;top:0;height:100%;width:auto;
-  transition:opacity .4s var(--kurve)}
-.marke .marke-dunkel{opacity:0}
-.kopf.fest .marke .marke-hell{opacity:0}
-.kopf.fest .marke .marke-dunkel{opacity:1}
-.kopf-knopf{font-size:14.5px;font-weight:600;text-decoration:none;color:var(--creme);
-  border:1px solid var(--linie-dunkel);padding:9px 18px;border-radius:999px;white-space:nowrap;
-  transition:background .35s var(--kurve),color .35s var(--kurve),border-color .35s var(--kurve)}
-.kopf-knopf:hover{background:var(--creme);color:var(--tief);border-color:var(--creme)}
-.kopf.fest .kopf-knopf{color:var(--creme);background:var(--akzent);border-color:var(--akzent)}
-.kopf.fest .kopf-knopf:hover{background:var(--tief);border-color:var(--tief)}
+/* ---------- Prototyp-Hinweis (statisch, scrollt weg) ---------- */
+.proto{background:#2a2346;color:#e9e2ff;font-size:13px;line-height:1.4;padding:8px var(--rand);text-align:center}
+.proto b{color:#fff}
+.proto a{color:#fff}
 
 /* ---------- Typografie ---------- */
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7vw,98px);line-height:1.0;letter-spacing:-.017em;color:var(--creme)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,6.6vw,92px);line-height:1.0;letter-spacing:-.017em;color:var(--creme)}
 h1 em{font-style:italic;color:var(--akzent-hell)}
-h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.6vw,66px);line-height:1.04;letter-spacing:-.016em}
-h2 em{font-style:italic}
-h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);line-height:1.16;letter-spacing:-.008em}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.2vw,58px);line-height:1.05;letter-spacing:-.016em;margin-top:16px;max-width:16em}
+h3{font-family:var(--serif);font-weight:500;font-size:clamp(23px,2.1vw,29px);line-height:1.16}
 .augenbraue{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--akzent)}
-.band-tief .augenbraue,.buehne .augenbraue{color:var(--akzent-hell)}
-.blei{font-size:clamp(18px,1.5vw,21px);line-height:1.6;max-width:34em;color:var(--tinte-weich);margin-top:18px}
-.band-tief .blei{color:rgba(251,247,239,.76)}
-.gross{font-family:var(--serif);font-size:clamp(29px,3.8vw,54px);line-height:1.1;letter-spacing:-.018em;font-weight:500;margin-top:22px}
+.dunkel .augenbraue{color:var(--akzent-hell)}
+.blei{font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:34em;color:var(--tinte-weich);margin-top:16px}
+.dunkel .blei{color:rgba(251,247,239,.76)}
 
 /* ---------- Bänder ---------- */
-.band{padding:clamp(74px,10vw,140px) var(--rand)}
-.band-creme{background:var(--creme)}
-.band-creme-2{background:var(--creme-2)}
-.band-tief{background:var(--tief);color:var(--creme)}
-.band-tiefer{background:var(--tief-3);color:var(--creme);border-top:1px solid rgba(251,247,239,.08)}
-.band-tiefer h2,.band-tiefer h3{color:var(--creme)}
-.band-tiefer .augenbraue{color:var(--akzent-hell)}
-.band-tiefer .blei{color:rgba(251,247,239,.76)}
-.band-tief h2,.band-tief h3{color:var(--creme)}
+.band{padding:clamp(60px,8vw,112px) var(--rand)}
+.hell{background:var(--creme)}
+.hell-2{background:var(--creme-2)}
+.dunkel{background:var(--tief);color:var(--creme)}
+.dunkel h2,.dunkel h3{color:var(--creme)}
 .innen{max-width:1180px;margin:0 auto}
-.eng{max-width:760px}
+.eng{max-width:780px}
 
-/* ---------- Bühne (Bauteil: Split-Bühne mit randlosem Portrait) ---------- */
-.buehne{position:relative;display:grid;grid-template-columns:1.08fr .92fr;min-height:100svh;background:var(--tief)}
-.buehne-text{display:flex;flex-direction:column;justify-content:center;padding:132px var(--rand) 76px;position:relative;z-index:2}
-.buehne-bild{position:relative;overflow:hidden}
-.buehne-bild img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
-.buehne-bild::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,var(--tief) 0%,rgba(17,27,46,.35) 26%,transparent 62%)}
-.buehne .unterzeile{margin-top:26px;font-size:clamp(17px,1.35vw,20px);line-height:1.58;max-width:31em;color:rgba(251,247,239,.78)}
-.knopf-reihe{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
-.knopf{display:inline-flex;align-items:center;gap:10px;background:var(--akzent-hell);color:#08201d;
-  font-family:var(--grotesk);font-size:16px;font-weight:700;text-decoration:none;
-  padding:15px 28px;border-radius:999px;border:0;cursor:pointer;
-  transition:transform .35s var(--kurve),background .35s var(--kurve),box-shadow .35s var(--kurve)}
-.knopf span{transition:transform .35s var(--kurve)}
-.knopf:hover{transform:translateY(-2px);background:var(--creme);box-shadow:0 14px 30px -18px rgba(0,0,0,.6)}
-.knopf:hover span{transform:translateX(5px)}
-.knopf.stumm{background:transparent;color:var(--creme);border:1px solid var(--linie-dunkel)}
-.knopf.stumm:hover{background:rgba(251,247,239,.1);border-color:rgba(251,247,239,.4);box-shadow:none}
-.knopf.hell{background:var(--akzent);color:var(--creme)}
-.knopf.hell:hover{background:var(--tief);color:var(--creme)}
-.buehne-fuss{position:absolute;left:var(--rand);bottom:30px;z-index:2;display:flex;align-items:center;gap:11px;
-  font-size:13px;letter-spacing:.05em;color:rgba(251,247,239,.5)}
-.buehne-fuss i{display:block;width:24px;height:1px;background:rgba(251,247,239,.4);font-style:normal}
+/* ---------- Kopf: nicht fest auf Mobil; am Desktop schlanke feste Leiste nach der Bühne ---------- */
+.kopf{position:absolute;top:auto;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--rand)}
+.marke{position:relative;display:block;height:26px;width:126px;flex:0 0 auto}
+.marke img{position:absolute;left:0;top:0;height:100%;width:auto}
+.marke .marke-dunkel{opacity:0}
+.kopf-nav{display:none}
+.kopf-knopf{display:none}
+@media (min-width:901px){
+  .kopf{padding:18px var(--rand)}
+  .marke{height:30px;width:146px}
+  .kopf-nav{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .kopf-nav a{font-size:14.5px;font-weight:600;color:var(--creme);text-decoration:none;padding:9px 14px;border-radius:999px}
+  .kopf-nav a:hover{background:rgba(251,247,239,.1)}
+  .kopf-knopf{display:inline-block;font-size:14.5px;font-weight:600;text-decoration:none;color:var(--creme);border:1px solid var(--linie-dunkel);padding:9px 18px;border-radius:999px;white-space:nowrap}
+  .kopf-knopf:hover{background:var(--creme);color:var(--tief)}
+  .kopf.fest{position:fixed;top:0;background:rgba(251,247,239,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--linie);padding-top:10px;padding-bottom:10px}
+  .kopf.fest .marke-hell{opacity:0}
+  .kopf.fest .marke-dunkel{opacity:1}
+  .kopf.fest .kopf-nav a{color:var(--tinte)}
+  .kopf.fest .kopf-nav a:hover{background:rgba(22,35,60,.06)}
+  .kopf.fest .kopf-knopf{background:var(--akzent);border-color:var(--akzent)}
+}
 
-/* ---------- Raster ---------- */
-.dreier{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,38px);margin-top:clamp(40px,5vw,66px)}
-.zweier{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,2.6vw,38px);margin-top:clamp(36px,4vw,54px)}
+/* ---------- Bühne (mobil zuerst: Bild oben, Text darunter) ---------- */
+.buehne{position:relative;background:var(--tief);display:grid;grid-template-columns:1fr}
+.buehne-bild{position:relative;overflow:hidden;height:26vh;min-height:180px;max-height:420px}
+.buehne-bild img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.buehne-bild::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--tief) 0%,rgba(17,27,46,.25) 42%,rgba(17,27,46,.45) 100%)}
+.buehne-text{padding:8px var(--rand) 48px;position:relative;z-index:2}
+.buehne .augenbraue{color:var(--akzent-hell)}
+.buehne h1{margin-top:14px}
+.unterzeile{margin-top:20px;font-size:clamp(17px,1.35vw,20px);line-height:1.58;max-width:30em;color:rgba(251,247,239,.8)}
+.handlung{display:flex;flex-direction:column;align-items:stretch;gap:14px;margin-top:28px}
+.knopf{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--akzent-hell);color:#08201d;font-family:var(--grotesk);font-size:16px;font-weight:700;text-decoration:none;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .35s var(--kurve),background .35s var(--kurve)}
+.knopf:hover{transform:translateY(-2px);background:var(--creme)}
+.leise{color:rgba(251,247,239,.82);font-size:15.5px;font-weight:600;text-decoration:underline;text-decoration-color:rgba(251,247,239,.3);text-underline-offset:5px;text-align:center}
+.leise:hover{text-decoration-color:var(--akzent-hell)}
+.angebot-zeile{margin-top:18px;font-size:15px;line-height:1.5;font-weight:600;color:var(--creme);max-width:34em}
+.angebot-zeile span{display:block;margin-top:2px;font-weight:400;color:rgba(251,247,239,.66)}
+.buehne-fuss{margin-top:26px;display:flex;align-items:flex-start;gap:11px;font-size:13px;line-height:1.5;letter-spacing:.02em;color:rgba(251,247,239,.62);max-width:40em}
+.buehne-fuss i{display:block;flex:0 0 24px;height:1px;margin-top:.75em;background:rgba(251,247,239,.4)}
+@media (max-width:900px){h1{font-size:clamp(38px,10vw,56px)}.buehne h1{margin-top:10px}.unterzeile{margin-top:14px}.angebot-zeile{margin-top:14px}.handlung{margin-top:20px;gap:12px}.buehne-bild{height:24vh;min-height:170px}}
+@media (min-width:901px){
+  .buehne{grid-template-columns:1.1fr .9fr;min-height:min(100svh,900px)}
+  .buehne-bild{order:2;height:auto;max-height:none}
+  .buehne-bild::after{background:linear-gradient(90deg,var(--tief) 0%,rgba(17,27,46,.35) 26%,transparent 62%)}
+  .buehne-text{display:flex;flex-direction:column;justify-content:center;padding:120px var(--rand) 72px}
+  .handlung{flex-direction:row;align-items:center;gap:26px}
+  .leise{text-align:left}
+}
 
-/* ---------- Weg (Journey) ---------- */
-.weg{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(44px,5vw,70px);
-  border-top:1px solid var(--linie-dunkel)}
-.weg .halt{padding:34px clamp(20px,2.4vw,38px) 8px;border-right:1px solid var(--linie-dunkel);position:relative}
-.weg .halt:last-child{border-right:0}
-.weg .zahl{font-family:var(--serif);font-size:clamp(52px,6vw,92px);line-height:.9;color:var(--akzent-hell);opacity:.85}
-.weg h3{margin-top:14px}
-.weg p{margin-top:14px;font-size:16px;line-height:1.6;color:rgba(251,247,239,.72)}
-.weg .marke-zeit{margin-top:20px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(251,247,239,.45);font-weight:600}
+/* ---------- Für wen: Zwei-Spalten-Zeile direkt unter der Bühne ---------- */
+.fuer-wen{background:var(--creme-2);padding:clamp(40px,5vw,64px) var(--rand)}
+.fuer-wen-raster{display:grid;grid-template-columns:1fr;gap:26px;margin-top:18px}
+.fuer-wen h3{font-size:22px}
+.eher-nicht>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px}
+.eher-nicht>summary::-webkit-details-marker{display:none}
+.eher-nicht>summary::after{content:"+";font-family:var(--grotesk);font-size:22px;line-height:1;color:var(--akzent);transition:transform .3s var(--kurve)}
+.eher-nicht[open]>summary::after{transform:rotate(45deg)}@media (min-width:760px){.fuer-wen-raster{grid-template-columns:1fr 1fr;gap:48px}}
 
-/* ---------- Karten ---------- */
-.karte{background:var(--creme);border:1px solid var(--linie);border-radius:18px;padding:clamp(24px,2.4vw,34px);
-  display:flex;flex-direction:column;transition:transform .4s var(--kurve),box-shadow .4s var(--kurve)}
-.karte:hover{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(22,35,60,.5)}
-.karte.markiert{border-color:var(--akzent);border-width:1.5px}
-.karte .kopfzeile{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.karte p{margin-top:14px;font-size:16px;line-height:1.62;color:var(--tinte-weich)}
-.karte .preis{margin-top:auto;padding-top:22px;font-size:15px;line-height:1.7;color:var(--tinte)}
-.karte .preis b{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.01em}
-.chip{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
-  padding:5px 12px;border-radius:999px;background:var(--creme-2);color:var(--tinte-weich);border:1px solid var(--linie)}
-.chip.akzent{background:rgba(26,98,89,.1);color:var(--akzent);border-color:rgba(26,98,89,.28)}
-
-/* ---------- Bild-Band (randlos, blendet in die dunkle Fläche) ---------- */
-.bild-band{position:relative;margin:0 calc(-1 * var(--rand)) clamp(40px,5vw,64px);overflow:hidden}
-.bild-band img{display:block;width:100%;height:clamp(300px,36vw,540px);object-fit:cover;object-position:50% 16%}
-/* Der Verlauf liegt NUR auf dem Bild — sonst frisst er die Bildunterschrift. */
-.bild-band .schleier{position:absolute;left:0;right:0;top:0;height:clamp(300px,36vw,540px);pointer-events:none;
-  background:linear-gradient(180deg,var(--tief) 0%,transparent 14%,transparent 76%,var(--tief) 100%)}
-.bild-band figcaption{position:relative;z-index:1;margin:16px var(--rand) 0;font-size:14.5px;line-height:1.55;
-  color:rgba(251,247,239,.62);max-width:44em}
-
-/* ---------- Merksatz / Zitat ---------- */
-.leitsatz{border-left:3px solid var(--akzent-hell);padding-left:clamp(20px,2.4vw,34px);max-width:22em}
-.leitsatz p{font-family:var(--serif);font-style:italic;font-weight:500;
-  font-size:clamp(26px,3.1vw,44px);line-height:1.16;letter-spacing:-.012em}
-
-/* ---------- Zwei-Spalten-Liste ---------- */
-.liste{list-style:none;margin-top:22px;display:grid;gap:13px}
-.liste li{position:relative;padding-left:30px;font-size:16.5px;line-height:1.58}
-.liste li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:1.5px;background:var(--akzent)}
-.band-tief .liste li::before{background:var(--akzent-hell)}
+/* ---------- Listen ---------- */
+.liste{list-style:none;margin-top:14px;display:grid;gap:10px}
+.liste li{position:relative;padding-left:28px;font-size:16px;line-height:1.55}
+.liste li::before{content:"";position:absolute;left:0;top:.66em;width:14px;height:1.5px;background:var(--akzent)}
 .liste.nein li::before{background:var(--tinte-weich);opacity:.45}
+.dunkel .liste li::before{background:var(--akzent-hell)}
 
-/* ---------- Einwände / FAQ ---------- */
-.einwand{border-top:1px solid var(--linie);padding:22px 0}
-.einwand:last-of-type{border-bottom:1px solid var(--linie)}
-.einwand summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
-  font-family:var(--serif);font-size:clamp(21px,1.9vw,27px);line-height:1.25;font-weight:500}
+/* ---------- Warum ---------- */
+.warum-raster{display:grid;grid-template-columns:1fr;gap:34px;margin-top:34px}
+@media (min-width:860px){.warum-raster{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}}
+.leitsatz{border-left:3px solid var(--akzent-hell);padding-left:clamp(18px,2.4vw,30px)}
+.leitsatz p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(25px,2.8vw,40px);line-height:1.16;letter-spacing:-.012em}
+.textlink{display:inline-block;margin-top:22px;color:var(--akzent);font-weight:700;text-decoration:underline;text-decoration-color:var(--linie);text-underline-offset:6px}
+.dunkel .textlink{color:var(--akzent-hell);text-decoration-color:rgba(251,247,239,.2)}
+
+/* ---------- Wie: drei Bewegungen ---------- */
+.weg{display:grid;grid-template-columns:1fr;margin-top:34px}
+.halt{padding:22px 0 8px;border-top:1px solid var(--linie-dunkel)}
+.zahl{font-family:var(--serif);font-size:clamp(46px,5vw,80px);line-height:.9;color:var(--akzent-hell)}
+.halt h3{margin-top:10px}
+.halt p{margin-top:10px;font-size:16px;line-height:1.6;color:rgba(251,247,239,.74)}
+.zeit{margin-top:14px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(251,247,239,.5);font-weight:600}
+@media (min-width:860px){
+  .weg{grid-template-columns:repeat(3,1fr);border-top:1px solid var(--linie-dunkel)}
+  .halt{border-top:0;border-right:1px solid var(--linie-dunkel);padding:30px clamp(18px,2.2vw,34px) 8px}
+  .halt:first-child{padding-left:0}
+  .halt:last-child{border-right:0}
+}
+
+/* ---------- Einwände ---------- */
+.einwaende{margin-top:30px}
+.einwand{border-top:1px solid var(--linie);padding:18px 0}
+.einwand summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;font-family:var(--serif);font-size:clamp(20px,1.8vw,26px);line-height:1.25;font-weight:500}
 .einwand summary::-webkit-details-marker{display:none}
-.einwand summary::after{content:"+";font-family:var(--grotesk);font-size:24px;line-height:1;color:var(--akzent);
-  transition:transform .3s var(--kurve);flex:0 0 auto}
+.einwand summary::after{content:"+";font-family:var(--grotesk);font-size:24px;line-height:1;color:var(--akzent);transition:transform .3s var(--kurve);flex:0 0 auto}
 .einwand[open] summary::after{transform:rotate(45deg)}
-.einwand p{margin-top:14px;max-width:52em;color:var(--tinte-weich);font-size:16.5px}
+.einwand p{margin-top:12px;color:var(--tinte-weich);font-size:16px}
+.mehr{border-top:1px solid var(--linie);border-bottom:1px solid var(--linie)}
+.mehr>summary{cursor:pointer;list-style:none;padding:16px 0;font-size:15px;font-weight:700;color:var(--akzent)}
+.mehr>summary::-webkit-details-marker{display:none}
+.mehr[open]>summary{padding-bottom:4px}
+.mehr .einwand:first-of-type{border-top:0}
 
-/* ---------- Selbst-Check ---------- */
-.check{background:var(--tief-2);border-radius:22px;padding:clamp(26px,3vw,44px);margin-top:clamp(36px,4vw,54px)}
-.check-frage{border-bottom:1px solid var(--linie-dunkel);padding:18px 0;display:flex;flex-wrap:wrap;
-  align-items:center;justify-content:space-between;gap:14px}
-.check-frage:last-of-type{border-bottom:0}
-.check-frage p{font-size:16.5px;line-height:1.5;max-width:36em;flex:1 1 300px;color:var(--creme)}
-.wahl{display:flex;gap:8px;flex:0 0 auto}
-.wahl button{font-family:var(--grotesk);font-size:14px;font-weight:600;padding:8px 17px;border-radius:999px;
-  border:1px solid var(--linie-dunkel);background:transparent;color:rgba(251,247,239,.8);cursor:pointer;
-  transition:background .25s var(--kurve),color .25s var(--kurve),border-color .25s var(--kurve)}
-.wahl button:hover{border-color:rgba(251,247,239,.5);color:var(--creme)}
-.wahl button[aria-pressed="true"]{background:var(--akzent-hell);border-color:var(--akzent-hell);color:#08201d}
-.check-ergebnis{margin-top:26px;padding:22px 24px;border-radius:14px;background:rgba(74,167,154,.12);
-  border:1px solid rgba(74,167,154,.35)}
-.check-ergebnis h3{font-size:clamp(21px,2vw,28px)}
-.check-ergebnis p{margin-top:10px;color:rgba(251,247,239,.82);font-size:16.5px;max-width:46em}
-.check-hinweis{margin-top:16px;font-size:14px;color:rgba(251,247,239,.5)}
+/* ---------- Einstiege (keine Stufenfolge: Einstiegspunkte in dieselbe Strecke) ---------- */
+.treppe{display:grid;grid-template-columns:1fr;gap:18px;margin-top:34px}
+@media (min-width:900px){.treppe{grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}}
+.stufe .knopf{margin-top:16px;align-self:flex-start;font-size:15px;padding:13px 24px}
+.stufe.markiert .knopf{background:var(--akzent);color:var(--creme)}
+.stufe.markiert .knopf:hover{background:var(--tief);color:var(--creme)}
+.rolle{margin-top:18px;background:var(--creme);border:1px solid var(--linie);border-radius:18px;padding:clamp(20px,2.2vw,28px);display:grid;grid-template-columns:1fr;gap:10px 32px;align-items:center}
+.rolle h3{margin-top:10px}
+.rolle p{font-size:15.5px;line-height:1.58;color:var(--tinte-weich)}
+.rolle .preis{margin-top:0;padding-top:0}
+.rolle .textlink{margin-top:10px;font-size:15px}
+@media (min-width:900px){.rolle{grid-template-columns:1.5fr 1fr}}
+.stufe{background:var(--creme);border:1px solid var(--linie);border-radius:18px;padding:clamp(22px,2.2vw,30px);display:flex;flex-direction:column}
+.stufe.markiert{border-color:var(--akzent);border-width:1.5px}
+.stufe-kopf{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--creme-2);color:var(--tinte-weich);border:1px solid var(--linie)}
+.chip.akzent{background:rgba(26,98,89,.1);color:var(--akzent);border-color:rgba(26,98,89,.28)}
+.stufe h3{margin-top:14px}
+.stufe p{margin-top:10px;font-size:15.5px;line-height:1.58;color:var(--tinte-weich)}
+.preis{margin-top:auto;padding-top:18px}
+.preis b{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em}
+.preis small{display:block;font-size:14px;color:var(--tinte-weich);margin-top:2px}
+.staffel{margin-top:8px;font-size:14.5px;color:var(--tinte-weich)}
+.staffel summary{cursor:pointer;font-weight:600;color:var(--tinte)}
+.staffel div{margin-top:6px;line-height:1.7}
+.stufe .textlink{margin-top:16px;font-size:15px}
+.anlass{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding-top:24px;border-top:1px solid var(--linie)}
+.anlass>span{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--tinte-weich);margin-right:4px;flex-basis:100%}
+.anlass a{font-size:15px;line-height:1.3;text-decoration:none;color:var(--tinte);padding:8px 14px;border-radius:999px;border:1px solid var(--linie);background:var(--creme)}
+.anlass a:hover{border-color:var(--akzent)}
+.anlass a.neu::after{content:"neu";margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--akzent)}
+.anlass a.alle{border-color:transparent;background:none;color:var(--akzent);font-weight:700;padding-left:4px}
+@media (min-width:760px){.anlass>span{flex-basis:auto}}
 
-/* ---------- Formular ---------- */
-.bogen{position:relative;margin-top:clamp(32px,3.6vw,48px);max-width:720px;display:grid;gap:18px}
-.feld-paar{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.feld{display:grid;gap:7px}
-.feld>span{font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(251,247,239,.6)}
-.feld>span b{color:var(--akzent-hell)}
-.feld input,.feld textarea,.feld select{width:100%;font-family:var(--grotesk);font-size:16.5px;color:var(--creme);
-  background:rgba(251,247,239,.05);border:1px solid var(--linie-dunkel);border-radius:12px;padding:13px 16px;
-  transition:border-color .3s var(--kurve),background .3s var(--kurve)}
-.feld textarea{resize:vertical;min-height:118px}
-.feld input::placeholder,.feld textarea::placeholder{color:rgba(251,247,239,.34)}
-.feld input:focus,.feld textarea:focus,.feld select:focus{outline:none;border-color:var(--akzent-hell);background:rgba(251,247,239,.09)}
-.feld input.schief{border-color:#e2603c}
-.feld select option{background:var(--tief);color:var(--creme)}
+/* ---------- Wer ---------- */
+.wer-raster{display:grid;grid-template-columns:1fr;gap:30px;margin-top:30px}
+@media (min-width:900px){.wer-raster{grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}}
+.wer-bild{border-radius:16px;overflow:hidden}
+.wer-bild img{width:100%;height:clamp(200px,24vw,320px);object-fit:cover;object-position:50% 20%}
+.wer .blei{max-width:none}
+.belege{margin-top:22px}
+.belege li{font-size:15px;color:rgba(251,247,239,.8)}
+
+/* ---------- Kontakt ---------- */
+.kontakt-raster{display:grid;grid-template-columns:1fr;gap:26px;margin-top:34px}
+@media (min-width:980px){.kontakt-raster{grid-template-columns:1.1fr .9fr;gap:0 40px;align-items:start}.kontakt-raster>.check{grid-column:2;grid-row:1 / span 2}.kontakt-raster>.bogen-rahmen{grid-column:1;grid-row:2}}
 .honig{position:absolute;left:0;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
-.hinweis{font-size:15px;color:rgba(251,247,239,.62);margin-top:4px}
-.hinweis.klein{font-size:13.5px;color:rgba(251,247,239,.45);max-width:52em}
-.hinweis.gut{color:var(--akzent-hell)}
-.hinweis.schlecht{color:#f0916f}
-.direkt{margin-top:22px;font-size:16.5px;color:rgba(251,247,239,.8)}
+.direkt{margin-top:18px;font-size:15px;color:rgba(251,247,239,.75)}
 .direkt a{color:var(--akzent-hell)}
+.check-ergebnis .knopf{margin-top:14px;font-size:15px;padding:12px 22px}
+.danach{list-style:none;margin-top:26px;display:grid;gap:14px;counter-reset:d}
+.danach li{position:relative;padding-left:44px;font-size:15.5px;line-height:1.5;color:rgba(251,247,239,.76)}
+.danach li b{color:var(--creme);font-weight:600}
+.danach li::before{counter-increment:d;content:"0" counter(d);position:absolute;left:0;top:-4px;font-family:var(--serif);font-size:26px;color:var(--akzent-hell)}
+.bogen{margin-top:30px;display:grid;gap:16px;padding-top:26px;border-top:1px solid var(--linie-dunkel)}
+.bogen-titel{font-family:var(--serif);font-size:24px;font-weight:500}
+.feld-paar{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:620px){.feld-paar{grid-template-columns:1fr 1fr}}
+.feld{display:grid;gap:6px}
+.feld>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(251,247,239,.62)}
+.feld>span b{color:var(--akzent-hell)}
+.feld input,.feld textarea,.feld select{width:100%;font-family:var(--grotesk);font-size:16px;color:var(--creme);background:rgba(251,247,239,.05);border:1px solid var(--linie-dunkel);border-radius:12px;padding:12px 15px}
+.feld textarea{resize:vertical;min-height:100px}
+.feld input::placeholder,.feld textarea::placeholder{color:rgba(251,247,239,.4)}
+.feld select option{background:var(--tief);color:var(--creme)}
+.hinweis{font-size:14.5px;color:rgba(251,247,239,.66)}
+.hinweis.klein{font-size:13.5px;color:rgba(251,247,239,.55)}
+.hinweis.gut{color:var(--akzent-hell)}
+.check{background:var(--tief-2);border-radius:20px;padding:clamp(22px,2.6vw,34px)}
+.check h3{font-size:clamp(24px,2.2vw,30px)}
+.check .einleitung{margin-top:8px;font-size:15px;color:rgba(251,247,239,.72)}
+.check-frage{border-bottom:1px solid var(--linie-dunkel);padding:14px 0;display:grid;gap:10px}
+.check-frage:last-of-type{border-bottom:0}
+.check-frage p{font-size:15.5px;line-height:1.5;color:var(--creme)}
+.wahl{display:flex;gap:8px}
+.wahl button{flex:1;font-family:var(--grotesk);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;border:1px solid var(--linie-dunkel);background:transparent;color:rgba(251,247,239,.85);cursor:pointer}
+.wahl button[aria-pressed="true"]{background:var(--akzent-hell);border-color:var(--akzent-hell);color:#08201d}
+@media (min-width:620px){.wahl button{flex:0 0 auto}}
+.check-ergebnis{margin-top:18px;padding:18px 20px;border-radius:14px;background:rgba(74,167,154,.12);border:1px solid rgba(74,167,154,.35)}
+.check-ergebnis h4{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.2}
+.check-ergebnis p{margin-top:8px;color:rgba(251,247,239,.85);font-size:15.5px}
+.check-hinweis{margin-top:12px;font-size:13.5px;color:rgba(251,247,239,.55)}
 
 /* ---------- Fuß ---------- */
-.fuss{background:var(--tief);color:rgba(251,247,239,.6);padding:44px var(--rand);border-top:1px solid var(--linie-dunkel);
-  display:flex;flex-wrap:wrap;gap:18px 34px;align-items:center;justify-content:space-between;font-size:14.5px}
-.fuss a{color:rgba(251,247,239,.8);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
-.fuss a:hover{border-color:var(--akzent-hell)}
-.fuss nav{display:flex;flex-wrap:wrap;gap:22px}
+.fuss{background:var(--tief-3);color:rgba(251,247,239,.62);padding:36px var(--rand);display:flex;flex-wrap:wrap;gap:16px 30px;align-items:center;justify-content:space-between;font-size:14.5px}
+.fuss a{color:rgba(251,247,239,.85);text-decoration:none}
+.fuss a:hover{text-decoration:underline}
+.fuss nav{display:flex;flex-wrap:wrap;gap:10px 20px}
 
-/* ---------- Reveal (Progressive Enhancement) ---------- */
-.auf{opacity:1;transform:none}
-.js .auf{opacity:0;transform:translateY(22px);transition:opacity .9s var(--kurve),transform .9s var(--kurve)}
-.js .auf.da{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .js .auf{opacity:1!important;transform:none!important;transition:none}
-  html{scroll-behavior:auto}
-  .knopf,.karte{transition:none}
+/* Raster-Kinder dürfen schrumpfen (sonst drückt ein ungeladenes Bild die Spalte breit) */
+.fuer-wen-raster>*,.warum-raster>*,.weg>*,.treppe>*,.wer-raster>*,.kontakt-raster>*{min-width:0}
+.wer-bild img{max-width:100%}
+@media (min-width:520px){.handlung .knopf{align-self:flex-start}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.knopf{transition:none}}
+
+/* =====================================================================
+   FINAL (Runde 2, 23.09.2026): A als Geruest + Weiche aus B + Navigatoren.
+   Alles unten ueberschreibt/ergaenzt die 1:1 uebernommenen A-Regeln.
+   ===================================================================== */
+
+/* ---------- Ankuendigungszeile (nicht fest, scrollt weg) ---------- */
+.ansage{display:block;text-decoration:none;color:#fff;font-size:14px;line-height:1.35;padding:9px var(--rand);text-align:center}
+.ansage[hidden]{display:none}
+.ansage-zp{background:radial-gradient(120% 200% at 74% 0%,#b880f0 0%,transparent 54%),linear-gradient(120deg,#52498a 0%,#635e8e 60%,#3b3466 100%)}
+.ansage-tomo{background:var(--tief-2);color:var(--creme);border-bottom:1px solid var(--linie-dunkel)}
+.ansage b{font-weight:700}
+.ansage .motto{display:inline-block;margin-right:10px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:2px 9px;vertical-align:1px}
+.ansage .neu-marke{display:inline-block;margin-right:10px;padding:3px 9px 2px;border-radius:7px;background:var(--akzent);color:var(--creme);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;vertical-align:1px}
+.ansage .pfeil{margin-left:6px}
+.ansage:hover .pfeil{margin-left:10px}
+.ansage .lang{display:none}
+@media (max-width:699px){.ansage .motto{display:none}}
+@media (min-width:700px){.ansage .lang{display:inline}.ansage .kurz{display:none}}
+
+/* ---------- Kopf: Navigatoren ---------- */
+.kopf-nav a.neu::after,.menue-panel a.neu::after{content:"neu";display:inline-block;margin-left:7px;padding:2px 7px 1px;border-radius:6px;background:var(--akzent);color:var(--creme);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;vertical-align:2px}
+@media (min-width:901px){.kopf-nav{gap:2px}.kopf-nav a{padding:9px 12px}}
+/* Mobil: Menue statt Leiste, Kopf NICHT fest */
+.menue{position:relative}
+.menue>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;color:var(--creme);padding:8px 14px;border:1px solid var(--linie-dunkel);border-radius:999px}
+.menue>summary::-webkit-details-marker{display:none}
+.menue>summary i{display:block;width:14px;height:10px;background:linear-gradient(currentColor 0 0) 0 0/100% 1.6px no-repeat,linear-gradient(currentColor 0 0) 0 50%/100% 1.6px no-repeat,linear-gradient(currentColor 0 0) 0 100%/100% 1.6px no-repeat}
+.menue[open]>summary{background:var(--creme);color:var(--tief)}
+.menue-panel{position:absolute;right:0;top:calc(100% + 10px);width:min(300px,calc(100vw - 40px));background:var(--creme);border:1px solid var(--linie);border-radius:16px;padding:8px;box-shadow:0 24px 50px -24px rgba(10,18,32,.55);display:grid}
+.menue-panel a{display:block;padding:12px 14px;border-radius:10px;color:var(--tinte);text-decoration:none;font-weight:600;font-size:16px}
+.menue-panel a:hover{background:var(--creme-2)}
+.menue-panel a.neu::after{color:var(--akzent)}
+.menue-panel .knopf{margin-top:6px;color:#08201d;justify-content:center}
+@media (min-width:901px){.menue{display:none}}
+
+/* ---------- Buehne: etwas niedriger, damit die Weiche am Desktop anschneidet ---------- */
+@media (min-width:901px){
+  .buehne{min-height:min(74svh,700px)}
+  .buehne-bild img{position:absolute;inset:0}
+  .buehne-bild::after{background:linear-gradient(180deg,rgba(17,27,46,.82) 0,rgba(17,27,46,0) 150px),linear-gradient(90deg,var(--tief) 0%,rgba(17,27,46,.35) 26%,transparent 62%)}
+  .buehne-text{padding:92px var(--rand) 44px}
+  h1{font-size:clamp(42px,5.2vw,76px)}
+  .unterzeile{margin-top:16px}
+  .angebot-zeile{margin-top:14px}
+  .handlung{margin-top:22px}
+  .buehne-fuss{margin-top:20px}
 }
 
-/* ---------- Mobil ---------- */
-@media (max-width:900px){
-  .buehne{grid-template-columns:1fr;min-height:auto}
-  .buehne-bild{order:-1;height:52vh;min-height:320px}
-  .buehne-bild::after{background:linear-gradient(0deg,var(--tief) 0%,rgba(17,27,46,.3) 40%,transparent 78%)}
-  .buehne-text{padding:44px var(--rand) 70px}
-  .buehne-fuss{position:static;margin-top:34px;left:auto;bottom:auto}
-  .dreier,.zweier{grid-template-columns:1fr}
-  .weg{grid-template-columns:1fr;border-top:0}
-  .weg .halt{border-right:0;border-top:1px solid var(--linie-dunkel);padding:26px 0 6px}
-  .feld-paar{grid-template-columns:1fr}
-  .kopf{padding:12px var(--rand)}
-  .marke{height:26px;width:126px}
-  .kopf-knopf{font-size:13.5px;padding:8px 15px}
-}
-@media (max-width:520px){
-  body{font-size:16.5px}
-  .knopf{width:100%;justify-content:center}
-  .wahl{width:100%}
-  .wahl button{flex:1}
-}
-@media print{
-  .kopf,.knopf-reihe,.check,.bogen{display:none}
-  body{background:#fff;color:#000;font-size:11pt}
-  .band,.buehne{padding:14pt 0;background:#fff!important;color:#000!important}
-  .band-tief h2,.band-tief h3,h1{color:#000!important}
-}
+/* ---------- Die Weiche: vier Tueren nach Lage ---------- */
+.weiche{background:var(--creme);padding:clamp(44px,5vw,72px) var(--rand) clamp(40px,4.4vw,60px)}
+.weiche h2{margin-top:10px;font-size:clamp(30px,3.4vw,46px)}
+.weiche-hilfe{margin-top:10px;font-size:16px;color:var(--tinte-weich);max-width:38em}
+.tueren{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+@media (min-width:860px){.tueren{grid-template-columns:1fr 1fr;gap:14px;align-items:start}}
+.tuer{background:var(--creme);border:1px solid var(--linie);border-radius:16px;transition:border-color .3s var(--kurve),box-shadow .3s var(--kurve)}
+.tuer:hover{border-color:var(--akzent)}
+.tuer[open]{border-color:var(--akzent);box-shadow:0 18px 40px -28px rgba(10,18,32,.5)}
+.tuer>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:18px 20px}
+.tuer>summary::-webkit-details-marker{display:none}
+.tuer-titel{font-family:var(--serif);font-weight:500;font-size:clamp(21px,1.9vw,26px);line-height:1.18;color:var(--tinte)}
+.tuer-meta{grid-column:1;font-size:13.5px;font-weight:600;letter-spacing:.02em;color:var(--akzent)}
+.tuer-meta .neu{display:inline-block;margin-left:8px;padding:2px 8px 1px;border-radius:6px;background:var(--akzent);color:var(--creme);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;vertical-align:1px}
+.tuer-zeichen{grid-column:2;grid-row:1 / span 2;width:34px;height:34px;border-radius:50%;border:1px solid var(--linie);display:grid;place-items:center;color:var(--akzent);font-size:20px;line-height:1;transition:transform .3s var(--kurve),background .3s}
+.tuer-zeichen::before{content:"+"}
+.tuer[open] .tuer-zeichen{transform:rotate(45deg);background:rgba(26,98,89,.08)}
+.tuer-innen{padding:0 20px 20px;border-top:1px solid var(--linie);margin:0 20px;padding:16px 0 20px}
+.tuer-innen p{font-size:15.5px;line-height:1.58;color:var(--tinte-weich)}
+.tuer-wege{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
+.tuer-wege a{font-size:15px;font-weight:700;color:var(--akzent);text-decoration:underline;text-decoration-color:rgba(26,98,89,.3);text-underline-offset:5px}
+.tuer-wege a.still{font-weight:600;color:var(--tinte-weich)}
+.weiche-fuss{margin-top:20px;display:grid;gap:10px;font-size:15px;color:var(--tinte-weich)}
+@media (min-width:860px){.weiche-fuss{grid-template-columns:auto 1fr;gap:10px 40px;align-items:baseline}}
+.weiche-fuss a{color:var(--tinte);text-decoration:underline;text-decoration-color:var(--linie);text-underline-offset:5px}
+.weiche-fuss a:hover{text-decoration-color:var(--akzent)}
+.weiche-fuss b{font-weight:700;color:var(--tinte)}
+.weiche-fuss .alle{color:var(--akzent);font-weight:700}
 
-/* --- Messe-Banner (temporaer, siehe Block in <body>) --- */
-/* Startwert im CSS, NICHT erst per JS: sonst liegt der Kopf beim ersten Frame
-   unter dem Banner (am gerenderten Bild gefangen) — und ohne JavaScript dauerhaft. */
-:root{--zp-h:56px}
-@media(max-width:34rem){:root{--zp-h:76px}}
-.kopf{top:var(--zp-h)}
-body{padding-top:var(--zp-h)}
-.zp-band{position:fixed;top:0;left:0;right:0;z-index:70;
-  background:radial-gradient(120% 200% at 74% 0%, #b880f0 0%, transparent 54%),
-             linear-gradient(120deg,#52498a 0%,#635e8e 60%,#3b3466 100%);
-  color:#fff;font-size:.92rem;line-height:1.35}
-.zp-link{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;
-  width:min(100% - 4.4rem,72rem);margin-inline:auto;
-  padding:.72rem 0;color:#fff;text-decoration:none}
-.zp-motto{font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  font-size:.82rem;white-space:nowrap;
-  border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:.24rem .7rem}
-.zp-x{font-weight:300;opacity:.75}
-.zp-text{flex:1 1 16rem;min-width:0}
-.zp-text strong{font-weight:700}
-.zp-pfeil{font-size:1.1rem;opacity:.85}
-.zp-link:hover .zp-pfeil,.zp-link:focus .zp-pfeil{opacity:1;transform:translateX(3px)}
-.zp-pfeil{transition:transform .16s ease,opacity .16s ease}
-.zp-zu{position:absolute;right:.7rem;top:50%;transform:translateY(-50%);
-  background:none;border:0;color:#e6d8ff;font-size:1.3rem;line-height:1;
-  cursor:pointer;padding:.3rem .5rem;border-radius:6px}
-.zp-zu:hover{color:#fff;background:rgba(255,255,255,.14)}
-@media(max-width:34rem){
-  .zp-link{padding:.65rem 0;gap:.55rem}
-  .zp-text{font-size:.86rem}
-  .zp-pfeil{display:none}
+/* ---------- Leiser "Mehr dazu"-Link je Block ---------- */
+.tiefer{margin-top:26px;font-size:15px;line-height:1.6;color:var(--tinte-weich)}
+.tiefer a{color:var(--akzent);font-weight:700;text-decoration:underline;text-decoration-color:var(--linie);text-underline-offset:5px}
+.tiefer a:hover{text-decoration-color:var(--akzent)}
+.tiefer .trenner{margin:0 8px;opacity:.5}
+.dunkel .tiefer{color:rgba(251,247,239,.6)}
+.dunkel .tiefer a{color:var(--akzent-hell);text-decoration-color:rgba(251,247,239,.2)}
+.fuer-wen .tiefer{margin-top:18px}
+.tiefer .neu-text{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--akzent);margin-right:6px}
+@media (max-width:620px){.tiefer .trenner{display:none}.tiefer a{display:inline-block;margin-top:4px}.tiefer .umbruch{display:block}}
+.tueren>*,.weiche-fuss>*{min-width:0}
+
+/* ---------- Pruefung Runde 2 (23.09.): Nachbesserungen ---------- */
+.nobr{white-space:nowrap}
+/* Desktop: der feste Kopf (ca. 64 px) verdeckte Anker-Ziele (#e-team, #e-diag, #e-rolle, #selbst) */
+@media (min-width:901px){
+  [id]{scroll-margin-top:84px}
+  /* Buehne straffer, damit die Tueren selbst (nicht nur die Ueberschrift) im ersten Bildschirm stehen */
+  .buehne{min-height:0}
+  .buehne-text{padding:80px var(--rand) 34px}
+  h1{font-size:clamp(42px,4.7vw,68px)}
+  .buehne-fuss{max-width:none;margin-top:18px}
+  .weiche{padding-top:36px}
+  .weiche h2{margin-top:6px}
+  .weiche-hilfe{max-width:none;margin-top:6px}
+  .tueren{margin-top:18px}
 }
-
-/* ===== 19.09.: Einstiege (Weiche A im Hero · Tueren-Band B · Fuss-Adressen) ===== */
-.weiche{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
-.weiche-label{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:rgba(251,247,239,.5);margin-right:4px}
-.weiche a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:rgba(251,247,239,.92);
-  font-size:15px;line-height:1.3;padding:9px 16px;border-radius:999px;border:1px solid var(--linie-dunkel);
-  background:rgba(251,247,239,.04);transition:border-color .3s,background .3s}
-.weiche a small{display:none}
-.weiche a .pfeil{color:var(--akzent-hell);transition:transform .3s}
-.weiche a:hover{border-color:var(--akzent-hell);background:rgba(251,247,239,.08)}
-.weiche a:hover .pfeil{transform:translateX(4px)}
-@media (max-width:620px){
-  .weiche{flex-direction:column;align-items:stretch;gap:0;margin-top:34px;border-top:1px solid var(--linie-dunkel)}
-  .weiche-label{padding:16px 0 4px}
-  .weiche a{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:14px;
-    border:0;border-bottom:1px solid var(--linie-dunkel);border-radius:0;background:none;
-    padding:14px 0;min-height:60px;font-size:16.5px}
-  .weiche a b{font-weight:600}
-  .weiche a small{display:block;grid-column:1;font-size:14px;color:rgba(251,247,239,.6);margin-top:3px}
-  .weiche a .pfeil{grid-column:2;grid-row:1 / span 2;font-size:20px}
-}
-
-.tueren{background:var(--creme-2);padding:clamp(54px,7vw,96px) var(--rand)}
-.tueren .innen{max-width:1180px;margin:0 auto}
-.tueren-kopf{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--akzent)}
-.tueren-liste{margin-top:26px;border-top:1px solid var(--linie)}
-.tuer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) auto;align-items:center;gap:10px 36px;
-  padding:26px 4px;border-bottom:1px solid var(--linie);text-decoration:none;color:var(--tinte);
-  transition:background .3s,padding .3s}
-.tuer:hover{background:rgba(255,255,255,.45);padding-left:14px}
-.tuer-titel{font-family:var(--serif);font-weight:500;font-size:clamp(26px,2.6vw,38px);line-height:1.1;letter-spacing:-.01em}
-.tuer-text{font-size:16px;line-height:1.55;color:var(--tinte-weich)}
-.tuer-text .adresse{display:block;margin-top:6px;font-size:13.5px;font-weight:600;letter-spacing:.03em;color:var(--akzent)}
-.tuer-text .hier{display:block;margin-top:6px;font-size:13.5px;font-weight:600;color:var(--tinte-weich);opacity:.8}
-.tuer-pfeil{font-size:24px;color:var(--akzent);transition:transform .3s}
-.tuer:hover .tuer-pfeil{transform:translateX(5px)}
-.tuer.ist-hier:hover .tuer-pfeil{transform:translateY(4px)}
-@media (max-width:760px){
-  .tuer{grid-template-columns:1fr auto;gap:6px 16px;padding:22px 0;min-height:64px}
-  .tuer:hover{padding-left:0}
-  .tuer-titel{grid-column:1;font-size:27px}
-  .tuer-text{grid-column:1;font-size:15.5px}
-  .tuer-pfeil{grid-column:2;grid-row:1 / span 2}
-}
-
-/* Variante C: Einstiege in der Kopfzeile (Desktop), aufklappbar ohne JavaScript */
-.kopf-wege{margin-left:auto;margin-right:6px;position:relative}
-.kopf-wege summary{list-style:none;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--creme);
-  padding:9px 14px;border-radius:999px;transition:background .3s,color .3s}
-.kopf-wege summary::-webkit-details-marker{display:none}
-.kopf-wege summary::after{content:"";display:inline-block;width:7px;height:7px;margin-left:9px;
-  border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-3px) rotate(45deg);
-  transition:transform .3s}
-.kopf-wege[open] summary::after{transform:translateY(1px) rotate(-135deg)}
-.kopf-wege summary:hover{background:rgba(251,247,239,.1)}
-.kopf.fest .kopf-wege summary{color:var(--tinte)}
-.kopf.fest .kopf-wege summary:hover{background:rgba(22,35,60,.06)}
-.kopf-panel{position:absolute;right:0;top:calc(100% + 12px);width:390px;background:var(--creme);color:var(--tinte);
-  border:1px solid var(--linie);border-radius:18px;padding:8px;box-shadow:0 24px 50px -24px rgba(10,18,32,.55)}
-.kopf-panel a{display:block;padding:14px 16px;border-radius:12px;text-decoration:none;color:var(--tinte)}
-.kopf-panel a:hover{background:var(--creme-2)}
-.kopf-panel b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.15}
-.kopf-panel small{display:block;margin-top:4px;font-size:14px;line-height:1.45;color:var(--tinte-weich)}
-.kopf-panel .adresse{display:block;margin-top:6px;font-size:12.5px;font-weight:700;letter-spacing:.03em;color:var(--akzent)}
-@media (max-width:760px){ .kopf-wege{display:none} }
-
-.fuss-einstiege{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;
-  padding-top:16px;border-top:1px solid var(--linie-dunkel);font-size:14.5px}
-.fuss-einstiege span{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
-.fuss-einstiege a{font-weight:600;letter-spacing:.01em}
-@media (max-width:520px){ .fuss-einstiege{flex-direction:column;align-items:flex-start;gap:10px} }
-
-/* ---------- Sticker unter dem Claim (TOMO-STICKER-2026-09-20) ---------- */
-.sticker-zeile{margin-top:30px;line-height:1}
-.sticker{display:inline-flex;align-items:center;gap:12px;padding:9px 18px 9px 9px;border-radius:14px;
-  background:var(--creme);color:var(--tinte);text-decoration:none;font-size:16px;line-height:1.25;
-  transform:rotate(-2.2deg);transform-origin:12% 50%;
-  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 30px rgba(0,0,0,.38),0 2px 6px rgba(0,0,0,.28);
-  transition:transform .35s var(--kurve),box-shadow .35s var(--kurve)}
-.sticker:hover,.sticker:focus-visible{transform:rotate(0deg) translateY(-2px);
-  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 20px 38px rgba(0,0,0,.42),0 3px 8px rgba(0,0,0,.3)}
-.sticker-neu{display:inline-block;padding:7px 11px 6px;border-radius:9px;background:var(--akzent);color:var(--creme);
-  font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transform:rotate(-3deg)}
-.sticker b{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:-.005em;margin-right:2px}
-.sticker-mehr{color:var(--tinte-weich)}
-.sticker-pfeil{color:var(--akzent);font-weight:700;transition:transform .35s var(--kurve)}
-.sticker:hover .sticker-pfeil{transform:translateX(4px)}
-.sticker-zeile + .unterzeile{margin-top:24px}
-@media (max-width:34rem){
-  .sticker-zeile{margin-top:24px}
-  .sticker{font-size:15px;gap:10px;padding:8px 14px 8px 8px}
-  .sticker b{font-size:21px}
-  .sticker-mehr{display:none}
-}
-@media (prefers-reduced-motion:reduce){.sticker,.sticker-pfeil{transition:none}}
 </style>
 </head>
 <body>
 
-<!-- ============================================================
-     MESSE-BANNER · Zukunft Personal Europe, 15.–17.09.2026
-     Temporär. Blendet sich per JS nach dem 18.09. selbst aus; ohne
-     JavaScript bleibt er stehen und muss von Hand entfernt werden
-     (diesen Block löschen — er hängt an nichts anderem).
-     Führt bewusst KEIN Veranstalter-Logo: Jay ist dort Besucher,
-     nicht Aussteller; ein fremdes Logo würde eine Verbindung
-     behaupten, die es nicht gibt. Nur Farbwelt und Motto-Zitat.
-     ============================================================ -->
-<aside class="zp-band" id="zp-band" aria-label="Hinweis zur Messe Zukunft Personal">
-  <a class="zp-link" href="team-human-ai.html">
-    <span class="zp-motto">Team Human <span class="zp-x">×</span> AI</span>
-    <!-- Umgestellt 19.09. (Entscheid D aus dem Teaser-Paket): Bis zur Messe stand hier
-         „Wir haben uns dort getroffen? Hier ist die Minute dazu.“ — ein Hinweis auf eine
-         Anwesenheit, die vorbei ist. Ab jetzt zeigt der Banner auf das, was daraus
-         geworden ist; bis 30.09. sichtbar, danach entfernt ihn das Skript unten. -->
-    <span class="zp-text"><strong>Zukunft&nbsp;Personal, Köln.</strong> Sechs Anbieter, drei Fragen — die Videos sind da.</span>
-    <span class="zp-pfeil" aria-hidden="true">→</span>
-  </a>
-  <button class="zp-zu" type="button" aria-label="Hinweis schließen">×</button>
-</aside>
-<script>
-(function(){
-  var b=document.getElementById('zp-band');
-  if(!b) return;
-  // Auslauf 30.09. statt 18.09. (Jay-Freigabe 16.09.): das Messe-Video kommt NACH der Messe,
-  // also am 18.09. — ein Banner, der genau dann verschwindet, schliesst den Weg zur Seite
-  // in dem Moment, in dem sie gebraucht wird.
-  if(new Date() >= new Date('2026-09-30T00:00:00')){ b.remove(); return; }
-  // Hoehe MESSEN statt raten: auf dem Handy bricht der Banner auf zwei Zeilen,
-  // ein fester Wert wuerde den Kopf dort ueberlappen lassen.
-  function hoehe(){
-    document.documentElement.style.setProperty('--zp-h', b.offsetHeight+'px');
-  }
-  function weg(){
-    b.remove();
-    document.documentElement.style.setProperty('--zp-h','0px');
-  }
-  try{ if(sessionStorage.getItem('zp-band-zu')){ weg(); return; } }catch(e){}
-  hoehe();
-  addEventListener('resize',hoehe);
-  b.querySelector('.zp-zu').addEventListener('click',function(){
-    weg();
-    try{ sessionStorage.setItem('zp-band-zu','1'); }catch(e){}
-  });
-})();
-</script>
 
+<!-- ANKUENDIGUNGSZEILE · temporaer · NICHT fest, scrollt mit weg.
+     Bis Di 29.09.: Zukunft Personal (wie live: Skript entfernt ihn ab 30.09. 00:00) (letzter ZP-Post laut Plan: K96 auf @ai_vantum, Sa 26.09.).
+     Ab Mi 30.09.: dieselbe Zeile traegt den Tomo-Hinweis (Text = Live-Sticker), bis 31.10. -->
+<a class="ansage ansage-zp" id="ansage-zp" href="team-human-ai.html" data-bis="2026-09-29"><span class="motto">Team Human × AI</span><span class="lang"><b>Zukunft Personal, Köln.</b> Sechs Anbieter, drei Fragen: die Videos sind da.</span><span class="kurz"><b>Zukunft Personal:</b> die Videos sind da.</span><span class="pfeil" aria-hidden="true">&rarr;</span></a>
+<a class="ansage ansage-tomo" id="ansage-tomo" href="tomo/" data-ab="2026-09-30" data-bis="2026-10-31" hidden><span class="neu-marke">Neu</span><b>Tomo ist da.</b> Eure eigene KI-Lösung<span class="pfeil" aria-hidden="true">&rarr;</span></a>
+
+<div id="oben" style="position:relative">
 <header class="kopf" id="kopf">
-  <a class="marke" href="#oben" aria-label="AIVantum — zur Startseite">
+  <a class="marke" href="#oben" aria-label="AIVantum, zum Seitenanfang">
     <img class="marke-hell" src="assets/aivantum-lockup-creme.png" alt="AIVantum" width="972" height="200">
     <img class="marke-dunkel" src="assets/aivantum-lockup-tinte.png" alt="" aria-hidden="true" width="972" height="200">
   </a>
-  <details class="kopf-wege"><summary>Einstiege</summary><div class="kopf-panel"><a href="https://tomo.aivantum.com/"><b>Eure eigene KI-Lösung</b><small>Vom einzelnen Formular bis zum eigenen lernenden System. Gemeinsam entwickelt, bei euch, für euch.</small><span class="adresse">tomo.aivantum.com</span></a><a href="https://restart.aivantum.com/"><b>Team im Umbruch</b><small>Reorg, neue Rolle, neues Team: sieben Schritte und ein kurzer Selbst-Check, kostenfrei.</small><span class="adresse">aivantum.com/restart</span></a><a href="https://entry.aivantum.com/"><b>Hochschule, Verein, Stiftung</b><small>Den Nachwuchs auf das Niveau vorbereiten, das die erste Stelle mit KI heute verlangt.</small><span class="adresse">aivantum.com/entry</span></a></div></details>
+  <nav class="kopf-nav" aria-label="Hauptnavigation">
+    <a href="#treppe">Angebot</a>
+    <a href="anlaesse.html">Anlässe</a>
+    <a class="neu" href="tomo/" data-bis="2026-10-31">Tomo</a>
+    <a href="unterlagen.html">Unterlagen</a>
+    <a href="#wer">Über uns</a>
+  </nav>
   <a class="kopf-knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten sprechen</a>
+  <details class="menue">
+    <summary><i aria-hidden="true"></i>Menü</summary>
+    <nav class="menue-panel" aria-label="Hauptnavigation mobil">
+      <a href="#treppe">Angebot</a>
+      <a href="anlaesse.html">Anlässe</a>
+      <a class="neu" href="tomo/" data-bis="2026-10-31">Tomo</a>
+      <a href="unterlagen.html">Unterlagen</a>
+      <a href="#wer">Über uns</a>
+      <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten sprechen</a>
+    </nav>
+  </details>
 </header>
 
-<main id="oben">
+<main>
 
-  <!-- ============ BÜHNE ============ -->
-  <section class="buehne">
-    <div class="buehne-text">
-      <p class="augenbraue auf">KI-Kompetenz für Organisationen</p>
-      <h1 class="auf">Werkzeuge einführen<br>ist einfach.<br><em>Anders arbeiten nicht.</em></h1>
-      <p class="sticker-zeile auf" data-bis="2026-10-31"><a class="sticker" href="https://tomo.aivantum.com/"><span class="sticker-neu">Neu</span><span><b>Tomo ist da.</b> <span class="sticker-mehr">Eure eigene KI-Lösung</span></span><span class="sticker-pfeil" aria-hidden="true">&rarr;</span></a></p>
-      <p class="unterzeile auf">Die Lizenzen sind gekauft, die Schulung ist gelaufen — und am Montagmorgen arbeitet trotzdem jeder weiter wie vorher. Genau dort setzen wir an: erst messen, was in deiner Organisation heute wirklich passiert, dann befähigen, dann verankern.</p>
-      <div class="knopf-reihe auf">
-        <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">Termin auswählen <span>&rarr;</span></a>
-        <a class="knopf stumm" href="#standort">Erst mal: wo stehst du?</a>
-      </div>
-      <nav class="weiche auf" aria-label="Andere Einstiege"><span class="weiche-label">Anderer Einstieg</span><a href="https://restart.aivantum.com/"><b>Team im Umbruch</b><small>Reorg, neue Rolle, neues Team: sieben Schritte und ein kurzer Selbst-Check, kostenfrei.</small><span class="pfeil" aria-hidden="true">&rarr;</span></a><a href="https://entry.aivantum.com/"><b>Hochschule, Verein, Stiftung</b><small>Den Nachwuchs auf das Niveau vorbereiten, das die erste Stelle mit KI heute verlangt.</small><span class="pfeil" aria-hidden="true">&rarr;</span></a><a href="https://tomo.aivantum.com/"><b>Eure eigene KI-Lösung</b><small>Vom einzelnen Formular bis zum eigenen lernenden System. Gemeinsam entwickelt, bei euch, für euch.</small><span class="pfeil" aria-hidden="true">&rarr;</span></a></nav>
-      <div class="buehne-fuss auf"><i></i>Jay Manuzon · KI-Befähigung und systemische Organisationsentwicklung</div>
-    </div>
+  <!-- 1 · BUEHNE: ein Satz, ein Knopf, ein leiser Link, eine Belegzeile -->
+  <section class="buehne" aria-labelledby="h-buehne">
     <div class="buehne-bild">
-      <img src="assets/portrait-jay.jpg" alt="Jay Manuzon, Gründer von AIVantum" fetchpriority="high" width="1050" height="1400">
+      <img src="assets/portrait-jay.jpg" alt="Jay Manuzon, Gründer von AIVantum" width="1050" height="1400" fetchpriority="high">
+    </div>
+    <div class="buehne-text">
+      <p class="augenbraue">KI-Kompetenz für Organisationen</p>
+      <h1 id="h-buehne">Werkzeuge einführen<br>ist einfach.<br><em>Anders arbeiten nicht.</em></h1>
+      <p class="unterzeile">Die Lizenzen sind gekauft, die Schulung ist gelaufen, und am Montagmorgen arbeitet trotzdem jeder weiter wie vorher. Genau dort setzen wir an.</p>
+      <p class="angebot-zeile">Diagnostik · Befähigung für Führungsteams · externer KI-Beauftragter<span>Preise auf der Seite · Erstgespräch&nbsp;kostenfrei</span></p>
+      <div class="handlung">
+        <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten sprechen <span aria-hidden="true">&rarr;</span></a>
+        <a class="leise" href="#weiche">Oder erst: wo stehst du gerade?</a>
+      </div>
+      <div class="buehne-fuss"><i></i><span>Jay Manuzon · über 15 Jahre Consulting und Transformation, zuletzt Senior Program Lead, <span class="nobr">RWE AG (DAX 40)</span></span></div>
     </div>
   </section>
 
-  <!-- ============ WARUM ============ -->
-  <section class="band band-creme" id="warum">
+  <!-- 2 · DIE WEICHE (aus B): vier Tueren nach Lage. Keine Preise, kein Angebots-Katalog:
+       jede Tuer oeffnet an Ort und Stelle und fuehrt weiter auf eine vorhandene Unterseite. -->
+  <section class="weiche" id="weiche" aria-labelledby="h-weiche"><span id="wege" class="anker-alt" aria-hidden="true"></span>
     <div class="innen">
-      <p class="augenbraue auf">Warum</p>
-      <h2 class="auf" style="margin-top:20px;max-width:15em">KI-Projekte scheitern selten an der Technik.</h2>
-      <p class="blei auf">Sie scheitern daran, dass niemand geklärt hat, welche Arbeit künftig anders läuft — und wer dafür etwas abgeben muss. Das ist keine Technologiefrage. Das ist eine Führungs- und Organisationsfrage, die zufällig mit Software beginnt.</p>
-      <p class="auf" style="margin-top:20px"><a href="lage.html" style="color:var(--akzent);font-weight:700;text-decoration:underline;text-decoration-color:var(--linie);text-underline-offset:6px">Das Paper dazu: Die falsch gelesene Lage <span aria-hidden="true">&rarr;</span></a></p>
+      <p class="augenbraue">Einstieg nach Lage</p>
+      <h2 id="h-weiche">Wo stehst du gerade?</h2>
+      <p class="weiche-hilfe">Wähl die Lage, die am ehesten passt. Dahinter liegt jeweils, was meistens hilft, und eine Seite zum Vertiefen.</p>
+      <div class="tueren">
 
-      <div class="zweier">
-        <div class="auf">
-          <h3>Was wir immer wieder sehen</h3>
-          <ul class="liste">
-            <li>Ein Werkzeug wird ausgerollt, die Nutzung versandet nach sechs Wochen.</li>
-            <li>Die Motivierten bauen im Stillen etwas, das niemand sonst kennt.</li>
-            <li>Führungskräfte sollen KI vorleben, ohne selbst je damit gearbeitet zu haben.</li>
-            <li>Es gibt eine Richtlinie, aber keine Antwort auf „darf ich das hier reinkopieren?“.</li>
-            <li>Erfolg wird in Lizenzen gemessen, nicht in veränderter Arbeit.</li>
-          </ul>
-        </div>
-        <div class="auf">
-          <div class="leitsatz" style="margin-top:8px">
-            <p>Nicht das Werkzeug muss überzeugen. Die Arbeit muss sich verändern.</p>
+        <details class="tuer" name="weiche" id="tuer-team">
+          <summary><span class="tuer-titel">Unser Führungsteam soll mit KI anders arbeiten.</span><span class="tuer-meta">Befähigung für Führungsteams</span><span class="tuer-zeichen" aria-hidden="true"></span></summary>
+          <div class="tuer-innen">
+            <p>Der übliche Einstieg, wenn die Richtung noch nicht gesetzt ist: zwei bis zehn Führungskräfte, inklusive Diagnostik, an ihren echten Aufgaben.</p>
+            <p class="tuer-wege"><a href="https://check.aivantum.com" target="_blank" rel="noopener">Erst prüfen: Team-Check, 30 Aussagen &rarr;</a><a class="still" href="#e-team">Zum Einstieg &darr;</a></p>
           </div>
-          <p class="blei" style="margin-top:26px;max-width:26em">Deshalb fangen wir nie mit einem Tool-Vergleich an, sondern mit einer Messung: Wo entsteht in deiner Organisation heute Wert, wo geht er verloren, und welche Ebene kann das überhaupt beeinflussen.</p>
-        </div>
+        </details>
+
+        <details class="tuer" name="weiche" id="tuer-messen">
+          <summary><span class="tuer-titel">Wir wollen wissen, wo KI bei uns Wert bringt.</span><span class="tuer-meta">Diagnostik für die Organisation</span><span class="tuer-zeichen" aria-hidden="true"></span></summary>
+          <div class="tuer-innen">
+            <p>Mehrstufige Diagnostik, von der Unternehmensführung bis in Produktion, Infrastruktur und Hardware. Ergebnis ist eine Karte mit ROI je Maßnahme.</p>
+            <p class="tuer-wege"><a href="https://gallery.aivantum.com" target="_blank" rel="noopener">Die fünf Instrumente ansehen &rarr;</a><a class="still" href="#e-diag">Zur Diagnostik &darr;</a></p>
+          </div>
+        </details>
+
+        <details class="tuer" name="weiche" id="tuer-regeln">
+          <summary><span class="tuer-titel">Wir müssen KI regeln und nachweisen können.</span><span class="tuer-meta">EU AI Act · externer KI-Beauftragter</span><span class="tuer-zeichen" aria-hidden="true"></span></summary>
+          <div class="tuer-innen">
+            <p>Artikel 4 zur KI-Kompetenz gilt seit dem 2.&nbsp;Februar 2025, die Transparenz- und Kennzeichnungspflichten seit dem 2.&nbsp;August 2026. Inventar, Befähigung und Kennzeichnung in einem Durchgang, oder die Rolle dauerhaft von außen.</p>
+            <p class="tuer-wege"><a href="https://ai-act.aivantum.com" target="_blank" rel="noopener">Zum AI-Act-Fahrplan &rarr;</a><a class="still" href="#e-rolle">Zur Rolle &darr;</a></p>
+          </div>
+        </details>
+
+        <details class="tuer" name="weiche" id="tuer-tomo">
+          <summary><span class="tuer-titel">Wir wollen eine eigene <span class="nobr">KI-Lösung.</span></span><span class="tuer-meta">Tomo<span class="neu" data-bis="2026-10-31">Neu</span></span><span class="tuer-zeichen" aria-hidden="true"></span></summary>
+          <div class="tuer-innen">
+            <p>Tomo ist ein KI-Kollege, der bei dir gebaut wird: für eine Aufgabe, für einen ganzen Bereich oder als System, das mitwächst. Nichts verlässt ihn ohne dein Ja.</p>
+            <p class="tuer-wege"><a href="tomo/">Tomo ansehen &rarr;</a></p>
+          </div>
+        </details>
+
+      </div>
+      <div class="weiche-fuss">
+        <p><b>Weiß ich noch nicht:</b> <a href="#selbst">fünf Fragen, im Browser &darr;</a></p>
+        <p><b>Anderer Anlass:</b> <a href="restart/">Team im Umbruch</a> · <a href="entry/">Hochschule, Verein, Stiftung</a> · <a href="https://oldschool.aivantum.com" target="_blank" rel="noopener">Wissen sichern</a> · <a class="alle" href="anlaesse.html">Alle Anlässe &rarr;</a></p>
       </div>
     </div>
   </section>
 
-  <!-- ============ WIE — EINE JOURNEY ============ -->
-  <section class="band band-tief" id="wie">
+  <!-- 3 · FUER WEN -->
+  <section class="fuer-wen" aria-labelledby="h-fuer-wen">
     <div class="innen">
-      <p class="augenbraue auf">Wie</p>
-      <h2 class="auf" style="margin-top:20px;max-width:16em">Ein Weg in drei Bewegungen — keine vier Angebote nebeneinander.</h2>
-      <p class="blei auf">Diagnostik, Befähigung und Verankerung sind bei uns nicht drei Produkte, die man einzeln kaufen kann. Sie sind drei Abschnitte derselben Strecke. Du kannst an jedem Punkt einsteigen und an jedem Punkt aufhören — aber du weißt immer, wo du gerade bist. Und du weißt vorher, wie viel Zeit es von deinen Leuten verlangt: Die steht bei jeder Bewegung dabei, weil Zeit der Grund Nummer eins ist, aus dem solche Vorhaben liegen bleiben.</p>
-
-      <div class="weg">
-        <div class="halt auf">
-          <div class="zahl">01</div>
-          <h3>Messen</h3>
-          <p>Wir erheben, was heute tatsächlich passiert — von der Unternehmensführung über die Führungsebene bis in Produktion und Infrastruktur. Ergebnis ist kein Gefühl, sondern eine Karte mit ROI je Maßnahme.</p>
-          <div class="marke-zeit">2 bis 6 Wochen &middot; ca. 1 Std. je befragter Person</div>
-        </div>
-        <div class="halt auf">
-          <div class="zahl">02</div>
-          <h3>Befähigen</h3>
-          <p>Führungskräfte und Teams arbeiten an ihren echten Aufgaben, nicht an Beispielen aus dem Standardvideo. Wer nach dem Termin nichts anders macht, hat nichts gelernt — das ist unser Maßstab, nicht die Teilnehmerzahl.</p>
-          <div class="marke-zeit">Blöcke von je einem halben Tag</div>
-        </div>
-        <div class="halt auf">
-          <div class="zahl">03</div>
-          <h3>Verankern</h3>
-          <p>Neue Arbeitsweisen halten nur, wenn Rollen, Regeln und Erwartungen mitziehen. Hier arbeiten wir am System: Verantwortlichkeiten, Nutzungsregeln, Nachweise — und daran, dass niemand zurückfällt, sobald der Druck steigt.</p>
-          <div class="marke-zeit">1 Termin im Monat, 90 Minuten</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SELBST-CHECK ============ -->
-  <section class="band band-tiefer" id="standort">
-    <div class="innen">
-      <p class="augenbraue auf">Standort</p>
-      <h2 class="auf" style="margin-top:20px;max-width:15em">Fünf Fragen, ehrlich beantwortet.</h2>
-      <p class="blei auf">Keine Mailadresse, keine Auswertung im Hintergrund, kein Lead-Formular dahinter. Die Einordnung passiert in deinem Browser und verlässt dein Gerät nicht. Sie ersetzt keine Diagnostik — sie sagt dir, ob ein Gespräch sich lohnt.</p>
-
-      <div class="check" id="check">
-        <div class="check-frage">
-          <p><b>1.</b> Es gibt eine schriftliche Regelung, was mit KI-Werkzeugen erlaubt ist und was nicht — und die Leute kennen sie.</p>
-          <div class="wahl" role="group" aria-label="Frage 1"><button type="button" data-f="0" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="0" data-w="0" aria-pressed="false">Nein</button></div>
-        </div>
-        <div class="check-frage">
-          <p><b>2.</b> Mindestens eine Führungskraft im Haus arbeitet selbst regelmäßig mit KI — nicht nur darüber.</p>
-          <div class="wahl" role="group" aria-label="Frage 2"><button type="button" data-f="1" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="1" data-w="0" aria-pressed="false">Nein</button></div>
-        </div>
-        <div class="check-frage">
-          <p><b>3.</b> Wir könnten benennen, welcher Arbeitsschritt durch KI konkret schneller oder besser geworden ist.</p>
-          <div class="wahl" role="group" aria-label="Frage 3"><button type="button" data-f="2" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="2" data-w="0" aria-pressed="false">Nein</button></div>
-        </div>
-        <div class="check-frage">
-          <p><b>4.</b> Wir wissen, welche KI-Systeme bei uns im Einsatz sind — auch die, die sich niemand offiziell genehmigt hat.</p>
-          <div class="wahl" role="group" aria-label="Frage 4"><button type="button" data-f="3" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="3" data-w="0" aria-pressed="false">Nein</button></div>
-        </div>
-        <div class="check-frage">
-          <p><b>5.</b> Für die KI-Kompetenzpflicht aus dem EU AI Act könnten wir einen Nachweis vorlegen, wenn jemand fragt.</p>
-          <div class="wahl" role="group" aria-label="Frage 5"><button type="button" data-f="4" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="4" data-w="0" aria-pressed="false">Nein</button></div>
-        </div>
-
-        <div class="check-ergebnis" id="check-ergebnis" hidden>
-          <h3 id="check-titel"></h3>
-          <p id="check-text"></p>
-          <div class="knopf-reihe" style="margin-top:24px">
-            <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">Darüber sprechen <span>&rarr;</span></a>
-          </div>
-        </div>
-        <p class="check-hinweis">Ohne JavaScript bleibt die Einordnung aus — die Fragen selbst sind trotzdem die richtigen. Nimm sie mit ins Gespräch.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WAS — DREI EINSTIEGE ============ -->
-  <section class="band band-creme" id="einstiege">
-    <div class="innen">
-      <p class="augenbraue auf">Was</p>
-      <h2 class="auf" style="margin-top:20px;max-width:14em">Drei Einstiege, je nachdem wo du stehst.</h2>
-      <p class="blei auf">Wir nennen es <em style="font-style:normal;color:var(--tinte)">AI Value Capture</em> — auf Deutsch: den Wert wirklich einsammeln, statt ihn nur zu vermuten. Preise stehen hier, weil du sie vor einem Gespräch wissen sollst und nicht danach. Alle Pakete vereinbaren wir im Gespräch, nicht über einen Warenkorb.</p>
-
-      <div class="dreier">
-        <article class="karte auf">
-          <div class="kopfzeile"><span class="chip">Für Organisationen</span></div>
-          <h3 style="margin-top:16px">AI Value Capture Diagnostik</h3>
-          <p>Mehrstufige Diagnostik der KI-Wertschöpfungspotenziale. Beginnt bei der Unternehmensführung und geht so tief, wie es nötig ist: über die Führungsebene bis in Produktion, Infrastruktur und Hardware. Mit ROI je Maßnahme.</p>
-          <div class="preis">
-            <b>ab 2.000 €</b><br>
-            Unternehmensführung 2.000 €<br>
-            + Führungskräfte 5.000 €<br>
-            + Produktion 10.000 €<br>
-            + Infrastruktur 12.000 €<br>
-            + Hardware 13.000 €
-            <div class="knopf-reihe" style="margin-top:20px">
-              <a class="knopf hell" href="https://gallery.aivantum.com" target="_blank" rel="noopener">Die fünf Instrumente ansehen <span>&rarr;</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="karte auf">
-          <div class="kopfzeile"><span class="chip">Für Führungsteams</span></div>
-          <h3 style="margin-top:16px">AI Value Capture für Führungskräfte</h3>
-          <p>Inklusive Diagnostik, für zwei bis zehn Führungskräfte, mit detailliertem Bericht und umsetzbaren Maßnahmen für das Führungsteam. Der übliche Einstieg, wenn die Richtung noch nicht gesetzt ist.</p>
-          <div class="preis">
-            <b>ab 800 €</b><br>
-            bis 2 Personen 800 €<br>
-            bis 5 Personen 2.000 €<br>
-            bis 8 Personen 3.200 €<br>
-            bis 10 Personen 4.000 €
-            <div class="knopf-reihe" style="margin-top:20px">
-              <a class="knopf hell" href="https://check.aivantum.com" target="_blank" rel="noopener">Kostenlos: wo steht euer Team? <span>&rarr;</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="karte markiert auf">
-          <div class="kopfzeile"><span class="chip akzent">Kostenfrei</span></div>
-          <h3 style="margin-top:16px">Initialgespräch</h3>
-          <p>30 Minuten. Erzähl kurz, was du erreichen willst und wo es hakt. Wenn wir nicht die Richtigen sind, sage ich das im Gespräch — und nenne dir, wen ich stattdessen kenne.</p>
-          <div class="preis">
-            <b>0 €</b><br>
-            30 Minuten, direkt im Kalender.
-            <div class="knopf-reihe" style="margin-top:20px">
-              <a class="knopf hell" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">Termin auswählen <span>&rarr;</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WEITERE WEGE ============ -->
-  <section class="band band-creme-2" id="wege">
-    <div class="innen">
-      <p class="augenbraue auf">Außerdem</p>
-      <h2 class="auf" style="margin-top:20px;max-width:15em">Vier Wege für konkrete Anlässe.</h2>
-
-      <div class="zweier">
-        <article class="karte auf">
-          <div class="kopfzeile"><span class="chip">Monatlich</span></div>
-          <h3 style="margin-top:16px">Externer KI-Beauftragter</h3>
-          <p>Wir übernehmen die Rolle von außen: KI-Inventar, KI-Richtlinie, Schulungsnachweis nach Artikel 4, laufendes Monitoring und eine Quartals-Risikoprüfung. Ein bis zwei Stunden deiner Zeit im Monat, den Rest machen wir.</p>
-          <div class="preis"><b>ab 490 € / Monat</b><br>einmalig 990 € für Inventar und Erstaufsetzung.<br><span style="color:var(--tinte-weich);font-size:14px">Wir starten bewusst mit wenigen Unternehmen.</span>
-            <div class="knopf-reihe" style="margin-top:20px">
-              <a class="knopf hell" href="#kontakt">Rolle anfragen <span>&rarr;</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="karte auf">
-          <div class="kopfzeile"><span class="chip">Termin: 2. August</span></div>
-          <h3 style="margin-top:16px">AI-Act-Fahrplan</h3>
-          <p>Artikel 4 zur KI-Kompetenz gilt seit dem 2. Februar 2025. Am 2. August 2026 kommen die Transparenz- und Kennzeichnungspflichten dazu. Wir haben daraus ein Paket gemacht: Inventar, Befähigung und Kennzeichnung in einem Durchgang.</p>
-          <div class="preis">
-            Wo du stehst, sagt dir der kostenlose Quick-Check in fünf Fragen.
-            <div class="knopf-reihe" style="margin-top:20px">
-              <a class="knopf hell" href="https://ai-act.aivantum.com" target="_blank" rel="noopener">Zum AI-Act-Fahrplan <span>&rarr;</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="karte auf">
-          <div class="kopfzeile"><span class="chip">Im Aufbau</span></div>
-          <h3 style="margin-top:16px">Sanierungsbericht (IBR)</h3>
-          <p>Wenn die Bank vor der Weiterfinanzierung einen unabhängigen Blick verlangt: Wir haben die Rechenarbeit dahinter automatisiert — verzahnte Planung, 13-Wochen-Liquidität, Kennzahlen, Szenarien, Berichtsentwurf. Prüfung, Urteil und Unterschrift liegen bei einem Wirtschaftsprüfer.</p>
-          <div class="preis"><span style="color:var(--tinte-weich);font-size:15px">Diese Zusammenarbeit bauen wir gerade auf. Wenn du in dieser Situation bist, sprich uns an — wir versprechen nichts, was noch nicht steht.</span></div>
-        </article>
-
-        <article class="karte auf">
-          <div class="kopfzeile"><span class="chip">Vor dem Ruhestand</span></div>
-          <h3 style="margin-top:16px">Wissenssicherung</h3>
-          <p>Euer Wiki speichert, was eure Leute wissen — nicht, wie sie entscheiden. Wenn erfahrene Träger in Rente gehen, geht genau dieser Teil mit. Wir holen ihn heraus, bevor der letzte Arbeitstag im Kalender steht, und übersetzen ihn in etwas, mit dem die Nachfolge tatsächlich arbeiten kann.</p>
-          <div class="preis">
-            <span style="color:var(--tinte-weich);font-size:15px">Ein kurzer Selbsttest zeigt, wie dringend es bei euch ist.</span>
-            <div class="knopf-reihe" style="margin-top:20px">
-              <a class="knopf hell" href="https://oldschool.aivantum.com" target="_blank" rel="noopener">Zur Wissenssicherung <span>&rarr;</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-      <p class="hinweis klein" style="color:var(--tinte-weich);margin-top:28px;max-width:60em">Organisatorische Compliance-Vorbereitung und betriebswirtschaftliche Aufbereitung. Keine Rechtsberatung, keine Feststellung der Insolvenzreife, kein Testat — das gehört zu Rechtsanwalt, Steuerberater oder Wirtschaftsprüfer.</p>
-    </div>
-  </section>
-
-  <!-- ============ FÜR WEN ============ -->
-  <section class="band band-creme" id="unterlagen">
-    <div class="innen">
-      <p class="augenbraue auf">Zum Weitergeben</p>
-      <h2 class="auf" style="margin-top:20px;max-width:15em">Unterlagen, die du in der Hand behalten kannst.</h2>
-      <p class="auf" style="max-width:38em">Je Einstieg eine Seite: was es ist, wie geliefert wird, was der nächste Schritt ist. Zum Ausdrucken, Weiterleiten, Danebenlegen.</p>
-
-      <div class="zweier auf" style="margin-top:28px">
-        <article class="karte">
-          <div class="kopfzeile"><span class="chip">Messen</span></div>
-          <h3 style="margin-top:16px">AI Value Capture Diagnostik</h3>
-          <p>Vier Ebenen, ein I/O-Strang, ein Live-Dashboard — die Standortbestimmung, bevor Geld fließt.</p>
-          <div class="knopf-reihe" style="margin-top:16px"><a class="knopf hell" href="https://gallery.aivantum.com/unterlagen/4-diagnostics.pdf" target="_blank" rel="noopener">Unterlage (PDF) <span>&rarr;</span></a></div>
-        </article>
-        <article class="karte">
-          <div class="kopfzeile"><span class="chip">1:1</span></div>
-          <h3 style="margin-top:16px">Executive Coaching</h3>
-          <p>Ein Raum, in dem Klarheit nicht inszeniert werden muss — 6&ndash;12 Monate, vertraulich.</p>
-          <div class="knopf-reihe" style="margin-top:16px"><a class="knopf hell" href="https://gallery.aivantum.com/unterlagen/5-executive-coaching.pdf" target="_blank" rel="noopener">Unterlage (PDF) <span>&rarr;</span></a></div>
-        </article>
-        <article class="karte">
-          <div class="kopfzeile"><span class="chip">Team</span></div>
-          <h3 style="margin-top:16px">Team-Transformation</h3>
-          <p>4&ndash;9 Monate Begleitung, bis anderes Arbeiten nicht mehr vom Kalender abh&auml;ngt.</p>
-          <div class="knopf-reihe" style="margin-top:16px"><a class="knopf hell" href="https://gallery.aivantum.com/unterlagen/6-team-transformation.pdf" target="_blank" rel="noopener">Unterlage (PDF) <span>&rarr;</span></a></div>
-        </article>
-      </div>
-
-      <p class="hinweis klein auf" style="color:var(--tinte-weich);margin-top:28px;max-width:60em">Weitere Formate laufen auf Anfrage und stehen bewusst nicht im festen Angebot oben:
-        <a href="https://gallery.aivantum.com/unterlagen/1-konzernfuehrung.pdf" target="_blank" rel="noopener">KI&#8209;Workflow&#8209;Sprint</a> &middot;
-        <a href="https://gallery.aivantum.com/unterlagen/2-selbstaendige.pdf" target="_blank" rel="noopener">KI&#8209;Workflow&#8209;Workshop f&uuml;r Selbst&auml;ndige</a> &middot;
-        <a href="https://gallery.aivantum.com/unterlagen/3-fuehrungsteams.pdf" target="_blank" rel="noopener">KI&#8209;Aktivierungstag f&uuml;rs Team</a> &middot;
-        <a href="https://gallery.aivantum.com/unterlagen/7-ai-use-case-canvas.pdf" target="_blank" rel="noopener">KI&#8209;Anwendungsfall&#8209;Workshop</a>.
-        Wenn eines davon zu deiner Lage passt, sprich uns an. Alle Unterlagen gesammelt: <a href="https://gallery.aivantum.com" target="_blank" rel="noopener">gallery.aivantum.com</a>.</p>
-      <p class="hinweis klein auf" style="color:var(--tinte-weich);margin-top:18px;max-width:60em">Du bist keine Firma, sondern eine <strong>Einrichtung</strong> — Hochschule, Verein oder Stiftung — und willst deinen Nachwuchs auf den KI-geprägten Berufseinstieg vorbereiten? <a href="https://entry.aivantum.com">aivantum.com/entry</a>. Und wer mit seinem Team mitten im Umbruch steckt (Reorg, neue Rolle, neues Team), findet unter <a href="https://restart.aivantum.com">aivantum.com/restart</a> sieben Schritte und einen kurzen Selbst-Check — kostenfrei, ohne Anmeldung.</p>
-      <p class="hinweis klein auf" style="color:var(--tinte-weich);margin-top:16px;max-width:60em">Bei größeren Vorhaben arbeiten wir mit ausgewählten Partnern, die den gleichen Anspruch haben und mit denen wir schon erfolgreich zusammengearbeitet haben.</p>
-    </div>
-  </section>
-
-  <section class="band band-creme" id="fuer-wen">
-    <div class="innen">
-      <p class="augenbraue auf">Für wen</p>
-      <h2 class="auf" style="margin-top:20px;max-width:15em">Wir passen nicht überall hin.</h2>
-      <div class="zweier">
-        <div class="auf">
+      <span id="fuer-wen" class="anker-alt" aria-hidden="true"></span><p class="augenbraue" id="h-fuer-wen">Für wen · Wir passen nicht überall hin</p>
+      <div class="fuer-wen-raster">
+        <div>
           <h3>Gut, wenn …</h3>
           <ul class="liste">
             <li>ihr zwischen 20 und 500 Menschen seid und die Wege noch kurz sind.</li>
             <li>jemand in der Führung das Thema wirklich will, nicht nur delegiert.</li>
-            <li>ihr messbare Veränderung wollt und bereit seid, sie auch zu messen.</li>
-            <li>es schon erste KI-Versuche gab — auch gescheiterte. Besonders dann.</li>
+            <li>es schon erste KI-Versuche gab, auch gescheiterte. Besonders dann.</li>
           </ul>
         </div>
-        <div class="auf">
-          <h3>Eher nicht, wenn …</h3>
+        <details class="eher-nicht" id="eher-nicht">
+          <summary><h3>Eher nicht, wenn …</h3></summary>
           <ul class="liste nein">
-            <li>ihr eine Standardsoftware sucht. Wir bauen keine — wir bauen mit euch eure Lösung.</li>
+            <li>ihr eine Standardsoftware sucht. Wir bauen keine, wir bauen mit euch eure Lösung.</li>
             <li>ein Nachweis für die Akte reicht und sich sonst nichts ändern soll.</li>
-            <li>die Entscheidung schon gefallen ist und nur noch Bestätigung fehlt.</li>
             <li>es um reine Programmier- oder Infrastruktur-Umsetzung geht.</li>
           </ul>
-        </div>
+        </details>
       </div>
+      <p class="tiefer">Noch unsicher, ob ihr passt? <a href="#selbst">Fünf Fragen ordnen es ein &darr;</a></p>
     </div>
   </section>
 
-  <!-- ============ WER ============ -->
-  <section class="band band-tief" id="wer">
+  <!-- 4 · WARUM -->
+  <section class="band hell" id="warum" aria-labelledby="h-warum">
     <div class="innen">
-      <figure class="bild-band auf">
-        <img src="assets/jay-whiteboard.jpg" alt="Jay Manuzon an einem Whiteboard: ein Kreis mit den Feldern Goals, Relationships und Content, daneben schreibt er Projects an." loading="lazy" width="2200" height="880">
-        <span class="schleier" aria-hidden="true"></span>
-        <figcaption>Aus einem Workshop. Erst das Feld sortieren, dann die Projekte danebenschreiben — nicht umgekehrt.</figcaption>
-      </figure>
-      <p class="augenbraue auf">Wer</p>
-      <h2 class="auf" style="margin-top:20px;max-width:16em">Ein Ingenieur, der gelernt hat, dass Technik selten das Problem ist.</h2>
-      <div class="zweier">
-        <div class="auf">
-          <p class="blei" style="max-width:none">Ich bin Jay Manuzon. Ausgebildet als Wirtschaftsingenieur, seit Jahren in Organisationen unterwegs, in denen Technologie eingeführt wurde und Menschen damit allein gelassen wurden. Systemischer Coach und Organisationsentwickler — und jemand, der KI täglich selbst benutzt, nicht nur bespricht.</p>
-          <p class="blei" style="max-width:none">Für meine eigene Arbeit betreibe ich einen lokalen KI-Assistenten, Tomo, auf dem eigenen Rechner; er ist täglich im Einsatz. Wo es dem Vorhaben nützt und der Kunde es erlaubt, setze ich ihn auch in der Zusammenarbeit ein.</p>
-          <p class="blei" style="max-width:none">Deshalb rede ich nicht über Werkzeuge, die ich nie angefasst habe, und verkaufe keine Transformation, die niemand tragen will. Wir messen zuerst. Danach reden wir über Maßnahmen.</p>
-        </div>
-        <div class="auf">
-          <div class="leitsatz" style="margin-top:8px"><p>Erst wissen, dann handeln. In dieser Reihenfolge, immer.</p></div>
-          <ul class="liste" style="margin-top:28px">
-            <li>Systemische Coaching- und Organisationsentwicklungs-Ausbildung, DVCT-anerkannter Coach</li>
-            <li>Wirtschaftsingenieurwesen, Schwerpunkt Software Engineering</li>
-            <li>Über 15 Jahre Consulting und Transformation, zuletzt Senior Program Lead, RWE AG (DAX 40)</li>
-            <li>Arbeitssprachen Deutsch und Englisch</li>
+      <p class="augenbraue">Warum</p>
+      <h2 id="h-warum">KI-Projekte scheitern selten an der Technik.</h2>
+      <div class="warum-raster">
+        <div>
+          <p class="blei" style="margin-top:0">Sie scheitern daran, dass niemand geklärt hat, welche Arbeit künftig anders läuft, und wer dafür etwas abgeben muss. Das ist eine Führungs- und Organisationsfrage, die zufällig mit Software beginnt.</p>
+          <ul class="liste" style="margin-top:22px">
+            <li>Ein Werkzeug wird ausgerollt, die Nutzung versandet nach sechs Wochen.</li>
+            <li>Führungskräfte sollen KI vorleben, ohne selbst je damit gearbeitet zu haben.</li>
+            <li>Erfolg wird in Lizenzen gemessen, nicht in veränderter Arbeit.</li>
           </ul>
         </div>
+        <div>
+          <div class="leitsatz"><p>Nicht das Werkzeug muss überzeugen. Die Arbeit muss sich verändern.</p></div>
+        </div>
       </div>
+      <p class="tiefer">Mehr dazu: <a href="lage.html">Paper „Die falsch gelesene Lage“ &rarr;</a><span class="trenner">·</span><span class="umbruch"></span><a href="fehlermodi.html">Arbeitsunterlage „Deine KI lügt nicht. Sie zeigt ihren Kontext.“ &rarr;</a></p>
     </div>
   </section>
 
-  <!-- ============ EINWÄNDE ============ -->
-  <section class="band band-creme" id="einwaende">
+  <!-- 5 · WIE -->
+  <section class="band dunkel" id="wie" aria-labelledby="h-wie">
+    <div class="innen">
+      <p class="augenbraue">Wie</p>
+      <h2 id="h-wie">Ein Weg in drei Bewegungen. Einsteigen und aufhören kannst du an jeder.</h2>
+      <p class="blei">Diagnostik, Befähigung und Verankerung sind bei uns nicht drei Produkte, die man einzeln kaufen kann. Sie sind drei Abschnitte derselben Strecke, und du weißt vorher, wie viel Zeit es von deinen Leuten verlangt.</p>
+      <div class="weg">
+        <div class="halt">
+          <div class="zahl">01</div>
+          <h3>Messen</h3>
+          <p>Wir erheben, was heute tatsächlich passiert, von der Unternehmensführung bis in Produktion und Infrastruktur. Ergebnis ist eine Karte mit ROI je Maßnahme.</p>
+          <div class="zeit">2 bis 6 Wochen · ca. 1 Std. je befragter Person</div>
+        </div>
+        <div class="halt">
+          <div class="zahl">02</div>
+          <h3>Befähigen</h3>
+          <p>Führungskräfte und Teams arbeiten an ihren echten Aufgaben, nicht an Beispielen aus dem Standardvideo. Wer nach dem Termin nichts anders macht, hat nichts gelernt.</p>
+          <div class="zeit">Blöcke von je einem halben Tag</div>
+        </div>
+        <div class="halt">
+          <div class="zahl">03</div>
+          <h3>Verankern</h3>
+          <p>Neue Arbeitsweisen halten nur, wenn Rollen, Regeln und Erwartungen mitziehen. Hier arbeiten wir am System, damit niemand zurückfällt, sobald der Druck steigt.</p>
+          <div class="zeit">1 Termin im Monat, 90 Minuten</div>
+        </div>
+      </div>
+      <p class="tiefer">Mehr dazu: <a href="https://gallery.aivantum.com/unterlagen/4-diagnostics.pdf" target="_blank" rel="noopener">die Diagnostik als Unterlage (PDF) &rarr;</a><span class="trenner">·</span><span class="umbruch"></span><a href="https://gallery.aivantum.com/unterlagen/6-team-transformation.pdf" target="_blank" rel="noopener">Team-Transformation (PDF) &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- 6 · EINWAENDE: vor den Optionen, 5 von 8 sichtbar -->
+  <section class="band hell" id="einwaende" aria-labelledby="h-einwaende">
     <div class="innen eng">
-      <p class="augenbraue auf">Bedenken</p>
-      <h2 class="auf" style="margin-top:20px">Was an dieser Stelle meistens kommt.</h2>
-      <div style="margin-top:38px" class="auf">
-        <details class="einwand">
-          <summary>Wir sind zu klein für so etwas.</summary>
-          <p>Kleiner heißt in der Regel schneller. Bei zwanzig Leuten kannst du in einem Nachmittag klären, was in einem Konzern ein Quartal braucht. Der Einstieg für Führungsteams beginnt bei 800 € und ist genau für diese Größe gedacht.</p>
-        </details>
-        <details class="einwand">
-          <summary>Wir haben keine IT-Abteilung.</summary>
-          <p>Braucht es für den Anfang auch nicht. Die ersten zwei Bewegungen — messen und befähigen — laufen ohne eine einzige Systemänderung. Erst wenn es an Infrastruktur geht, brauchst du jemanden, der Zugriff hat. Bis dahin sind wir längst an einem Punkt, an dem klar ist, ob sich das lohnt.</p>
-        </details>
-        <details class="einwand">
-          <summary>Meine Leute haben Angst, dass ihr Job wegrationalisiert wird.</summary>
-          <p>Das ist die häufigste Sorge im Haus, und sie verschwindet nicht dadurch, dass man sie nicht anspricht. Wir arbeiten offen damit: In der Befähigung sind es die Mitarbeitenden selbst, die entscheiden, welche ihrer Aufgaben sie abgeben wollen — nicht wir und nicht die Führung. Wer erlebt, dass er die lästigen Teile loswird und nicht die interessanten, hört auf, sich zu wehren. Wo Stellen tatsächlich zur Debatte stehen, sagen wir es der Führung deutlich, statt es hinter „Effizienz“ zu verstecken.</p>
-        </details>
-        <details class="einwand">
+      <p class="augenbraue">Bedenken</p>
+      <h2 id="h-einwaende">Was an dieser Stelle meistens kommt.</h2>
+      <div class="einwaende">
+        <details class="einwand" open>
           <summary>Kriegen wir am Ende wieder nur einen Foliensatz?</summary>
-          <p>Der Vorwurf ist berechtigt, er ist der häufigste gegen KI-Berater. Deshalb: Aus der Diagnostik kommt eine Maßnahmenkarte mit ROI je Position, nicht eine Empfehlung zur Haltung. Aus der Befähigung kommt etwas, das am nächsten Tag im Betrieb läuft, weil an echten Aufgaben gearbeitet wurde. Wenn du nach einem Termin nichts anders machst, war der Termin schlecht — das ist unser Maßstab.</p>
-        </details>
-        <details class="einwand">
-          <summary>Und der Datenschutz? Und der EU AI Act?</summary>
-          <p>Beides ist Teil der Arbeit, nicht ein Anhang. Wir erstellen ein Inventar der tatsächlich genutzten Systeme, eine Nutzungsregelung, die Menschen auch lesen, und einen dokumentierten Schulungsnachweis nach Artikel 4. Die Regelung arbeitet mit einem Ampelmodell statt mit einem Pauschalverbot — grün, gelb, rot je Datenart. Pauschalverbote werden umgangen, Ampeln werden befolgt. Was wir nicht tun: rechtsverbindlich einordnen. Das gehört zu deinem Rechtsbeistand, und wir sagen dir, wann er dran ist.</p>
+          <p>Der Vorwurf ist berechtigt, er ist der häufigste gegen KI-Berater. Deshalb: Aus der Diagnostik kommt eine Maßnahmenkarte mit ROI je Position, nicht eine Empfehlung zur Haltung. Aus der Befähigung kommt etwas, das am nächsten Tag im Betrieb läuft, weil an echten Aufgaben gearbeitet wurde. Wenn du nach einem Termin nichts anders machst, war der Termin schlecht: Das ist unser Maßstab.</p>
         </details>
         <details class="einwand">
           <summary>Wir hatten schon eine Schulung. Es hat nichts gebracht.</summary>
           <p>Das ist der häufigste Ausgangspunkt, und es ist meistens kein Fehler der Schulung. Ein Training verändert Verhalten nur, wenn danach jemand die Rahmenbedingungen ändert: Erwartungen, Zeit, Rollen. Genau das ist die dritte Bewegung, und die meisten Anbieter hören vorher auf.</p>
         </details>
         <details class="einwand">
+          <summary>Meine Leute haben Angst, dass ihr Job wegrationalisiert wird.</summary>
+          <p>Das ist die häufigste Sorge im Haus, und sie verschwindet nicht dadurch, dass man sie nicht anspricht. Wir arbeiten offen damit: In der Befähigung sind es die Mitarbeitenden selbst, die entscheiden, welche ihrer Aufgaben sie abgeben wollen, nicht wir und nicht die Führung. Wer erlebt, dass er die lästigen Teile loswird und nicht die interessanten, hört auf, sich zu wehren. Wo Stellen tatsächlich zur Debatte stehen, sagen wir es der Führung deutlich, statt es hinter „Effizienz“ zu verstecken.</p>
+        </details>
+        <details class="einwand">
           <summary>Woher weiß ich, dass ihr das könnt?</summary>
           <p>Ehrlich: An dieser Stelle stünden bei den meisten Anbietern Logos und Fallzahlen. Bei uns nicht, weil die neuen Angebote genau das noch nicht haben. Was du stattdessen bekommst, ist ein kostenfreies Gespräch, in dem du an der Qualität der Fragen erkennst, ob wir das Feld verstehen. Wenn nicht, hast du dreißig Minuten verloren und wir unsere.</p>
         </details>
         <details class="einwand">
-          <summary>Was kostet das am Ende wirklich?</summary>
-          <p>Die Zahlen oben sind die echten. Was dazukommt, sind Reisekosten bei Präsenzterminen und Umsatzsteuer. Was nicht dazukommt: Lizenzgebühren, Erfolgsbeteiligungen oder ein Rahmenvertrag, den du nicht wolltest.</p>
+          <summary>Wir sind zu klein für so etwas.</summary>
+          <p>Kleiner heißt in der Regel schneller. Bei zwanzig Leuten kannst du in einem Nachmittag klären, was in einem Konzern ein Quartal braucht. Der Einstieg für Führungsteams beginnt bei 800 € und ist genau für diese Größe gedacht.</p>
+        </details>
+        <details class="mehr">
+          <summary>Drei weitere Bedenken: IT, Datenschutz, Kosten</summary>
+          <details class="einwand">
+            <summary>Wir haben keine IT-Abteilung.</summary>
+            <p>Braucht es für den Anfang auch nicht. Die ersten zwei Bewegungen, messen und befähigen, laufen ohne eine einzige Systemänderung. Erst wenn es an Infrastruktur geht, brauchst du jemanden, der Zugriff hat. Bis dahin sind wir längst an einem Punkt, an dem klar ist, ob sich das lohnt.</p>
+          </details>
+          <details class="einwand">
+            <summary>Und der Datenschutz? Und der EU AI Act?</summary>
+            <p>Beides ist Teil der Arbeit, nicht ein Anhang. Wir erstellen ein Inventar der tatsächlich genutzten Systeme, eine Nutzungsregelung, die Menschen auch lesen, und einen dokumentierten Schulungsnachweis nach Artikel 4. Die Regelung arbeitet mit einem Ampelmodell statt mit einem Pauschalverbot: grün, gelb, rot je Datenart. Pauschalverbote werden umgangen, Ampeln werden befolgt. Was wir nicht tun: rechtsverbindlich einordnen. Das gehört zu deinem Rechtsbeistand, und wir sagen dir, wann er dran ist.</p>
+          </details>
+          <details class="einwand">
+            <summary>Was kostet das am Ende wirklich?</summary>
+            <p>Die Zahlen auf dieser Seite sind die echten. Was dazukommt, sind Reisekosten bei Präsenzterminen und Umsatzsteuer. Was nicht dazukommt: Lizenzgebühren, Erfolgsbeteiligungen oder ein Rahmenvertrag, den du nicht wolltest.</p>
+          </details>
         </details>
       </div>
+      <p class="tiefer">Mehr dazu: <a href="https://ai-act.aivantum.com" target="_blank" rel="noopener">AI Act im Detail, mit Quick-Check &rarr;</a></p>
     </div>
   </section>
 
-  <!-- ============ NACH DER BUCHUNG ============ -->
-  <section class="band band-creme-2" id="danach">
+  <!-- 7 · EINSTIEGE: Initialgespraech markiert und zuerst, dann zwei bezahlte Einstiege, darunter die Rolle -->
+  <section class="band hell-2" id="treppe" aria-labelledby="h-treppe"><span id="einstiege" class="anker-alt" aria-hidden="true"></span><span id="angebot" class="anker-alt" aria-hidden="true"></span>
     <div class="innen">
-      <p class="augenbraue auf">Ablauf</p>
-      <h2 class="auf" style="margin-top:20px;max-width:15em">Was passiert, wenn du auf den Termin klickst.</h2>
-      <div class="dreier">
-        <div class="auf">
-          <div class="zahl" style="font-family:var(--serif);font-size:clamp(46px,5vw,78px);line-height:.9;color:var(--akzent)">01</div>
-          <h3 style="margin-top:12px">Du wählst einen Slot</h3>
-          <p style="margin-top:12px;color:var(--tinte-weich);font-size:16px">Direkt in unserem Kalender, kein Zwischenformular. Du bekommst sofort eine Bestätigung mit Videolink. Vorbereitung brauchst du keine.</p>
+      <p class="augenbraue">Was</p>
+      <h2 id="h-treppe">Drei Einstiege, je nachdem wo du stehst.</h2>
+      <p class="blei">Preise stehen hier, weil du sie vor einem Gespräch wissen sollst und nicht danach. Alle Pakete vereinbaren wir im Gespräch, nicht über einen Warenkorb.</p>
+
+      <div class="treppe">
+        <article class="stufe markiert" id="e-initial">
+          <div class="stufe-kopf"><span class="chip akzent">Kostenfrei</span></div>
+          <h3>Initialgespräch</h3>
+          <p>30 Minuten. Erzähl kurz, was du erreichen willst und wo es hakt. Wenn wir nicht die Richtigen sind, sagen wir das im Gespräch und nennen dir, wen wir stattdessen kennen.</p>
+          <div class="preis">
+            <b>0 €</b>
+            <small>30 Minuten, direkt im Kalender.</small>
+            <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">Termin auswählen <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="stufe" id="e-team">
+          <div class="stufe-kopf"><span class="chip">Für Führungsteams</span></div>
+          <h3>AI Value Capture für Führungskräfte</h3>
+          <p>Inklusive Diagnostik, für zwei bis zehn Führungskräfte, mit Bericht und umsetzbaren Maßnahmen. Der übliche Einstieg, wenn die Richtung noch nicht gesetzt ist.</p>
+          <div class="preis">
+            <b>ab 800 €</b>
+            <details class="staffel"><summary>Staffel nach Teamgröße</summary><div>bis 2 Personen 800 €<br>bis 5 Personen 2.000 €<br>bis 8 Personen 3.200 €<br>bis 10 Personen 4.000 €</div></details>
+            <a class="textlink" href="https://check.aivantum.com" target="_blank" rel="noopener">Kostenlos: wo steht euer Team? <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="stufe" id="e-diag">
+          <div class="stufe-kopf"><span class="chip">Für Organisationen</span></div>
+          <h3>AI Value Capture Diagnostik</h3>
+          <p>Mehrstufige Diagnostik der KI-Wertschöpfungspotenziale, von der Unternehmensführung bis in Produktion, Infrastruktur und Hardware. Mit ROI je Maßnahme.</p>
+          <div class="preis">
+            <b>ab 2.000 €</b>
+            <details class="staffel"><summary>Staffel nach Tiefe</summary><div>Unternehmensführung 2.000 €<br>+ Führungskräfte 5.000 €<br>+ Produktion 10.000 €<br>+ Infrastruktur 12.000 €<br>+ Hardware 13.000 €</div></details>
+            <a class="textlink" href="https://gallery.aivantum.com" target="_blank" rel="noopener">Die fünf Instrumente ansehen <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      </div>
+
+      <article class="rolle" id="e-rolle">
+        <div>
+          <span class="chip">Monatlich</span>
+          <h3>Externer KI-Beauftragter</h3>
+          <p style="margin-top:8px">Wir übernehmen die Rolle von außen: KI-Inventar, KI-Richtlinie, Schulungsnachweis nach Artikel 4, laufendes Monitoring und eine Quartals-Risikoprüfung.</p>
         </div>
-        <div class="auf">
-          <div class="zahl" style="font-family:var(--serif);font-size:clamp(46px,5vw,78px);line-height:.9;color:var(--akzent)">02</div>
-          <h3 style="margin-top:12px">Wir sprechen 30 Minuten</h3>
-          <p style="margin-top:12px;color:var(--tinte-weich);font-size:16px">Ich frage, du erzählst. Kein Pitch, keine Folien. Am Ende sage ich dir, was ich sehe — auch wenn das heißt, dass du uns nicht brauchst.</p>
+        <div class="preis">
+          <b>ab 490 € / Monat</b>
+          <small>einmalig 990 € für Inventar und Erstaufsetzung. Wir starten bewusst mit wenigen Unternehmen.</small>
+          <a class="textlink" href="#kontakt">Rolle anfragen <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="auf">
-          <div class="zahl" style="font-family:var(--serif);font-size:clamp(46px,5vw,78px);line-height:.9;color:var(--akzent)">03</div>
-          <h3 style="margin-top:12px">Du bekommst es schriftlich</h3>
-          <p style="margin-top:12px;color:var(--tinte-weich);font-size:16px">Innerhalb von zwei Werktagen eine Seite: was wir verstanden haben, was wir vorschlagen, was es kostet. Ohne Nachfassen, ohne Verkaufsstrecke.</p>
+      </article>
+
+      <p class="tiefer">Mehr dazu: <a href="anlaesse.html#unterlagen">je Einstieg eine Unterlage zum Weitergeben &rarr;</a><span class="trenner">·</span><span class="umbruch"></span><a href="anlaesse.html">alle Anlässe &rarr;</a><span class="trenner">·</span><span class="umbruch"></span><span class="neu-text" data-bis="2026-10-31">Neu</span><a href="tomo/">Tomo, eure eigene KI-Lösung &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- 8 · WER: kurz, dieselbe Belegzeile wie in der Buehne -->
+  <section class="band dunkel wer" id="wer" aria-labelledby="h-wer">
+    <div class="innen">
+      <p class="augenbraue">Wer</p>
+      <h2 id="h-wer">Ein Ingenieur, der gelernt hat, dass Technik selten das Problem ist.</h2>
+      <div class="wer-raster">
+        <div>
+          <p class="blei" style="margin-top:0">Ich bin Jay Manuzon. Ausgebildet als Wirtschaftsingenieur, seit Jahren in Organisationen unterwegs, in denen Technologie eingeführt wurde und Menschen damit allein gelassen wurden. Systemischer Coach und Organisationsentwickler, und jemand, der KI täglich selbst benutzt: Für meine eigene Arbeit betreibe ich einen lokalen KI-Assistenten, Tomo.</p>
+          <ul class="liste belege">
+            <li>Über 15 Jahre Consulting und Transformation, zuletzt Senior Program Lead, RWE AG (DAX 40)</li>
+            <li>Systemische Coaching- und Organisationsentwicklungs-Ausbildung, DVCT-anerkannter Coach</li>
+            <li>Wirtschaftsingenieurwesen, Schwerpunkt Software Engineering</li>
+            <li>Arbeitssprachen Deutsch und Englisch</li>
+          </ul>
+          <p class="tiefer">Coaching für dich selbst liegt im anderen Haus: <a href="https://coachjay.de" target="_blank" rel="noopener">coachjay.de &rarr;</a></p>
+        </div>
+        <div>
+          <figure class="wer-bild"><img src="assets/jay-whiteboard.jpg" alt="Jay Manuzon an einem Whiteboard: ein Kreis mit den Feldern Goals, Relationships und Content, daneben schreibt er Projects an." width="2200" height="880"></figure>
+          <div class="leitsatz" style="margin-top:26px"><p>Erst wissen, dann handeln. In dieser Reihenfolge, immer.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ KONTAKT ============ -->
-  <section class="band band-tief" id="kontakt">
+  <!-- 9 · KONTAKT: Kalender + Danach | Selbst-Check · darunter das Formular -->
+  <section class="band dunkel" id="kontakt" aria-labelledby="h-kontakt" style="background:var(--tief-3);border-top:1px solid rgba(251,247,239,.08)"><span id="danach" class="anker-alt" aria-hidden="true"></span><span id="gespraech" class="anker-alt" aria-hidden="true"></span>
     <div class="innen">
-      <p class="augenbraue auf">Anfangen</p>
-      <h2 class="auf" style="margin-top:20px;max-width:14em">Zwei Wege. Such dir einen aus.</h2>
-      <p class="blei auf">Wenn du weißt, was du willst: nimm den Kalender. Wenn du erst sortieren möchtest: schreib mir. Beides landet bei mir persönlich.</p>
+      <p class="augenbraue">Anfangen</p>
+      <h2 id="h-kontakt">Drei Wege. Such dir einen aus.</h2>
+      <p class="blei">Wenn du weißt, was du willst: nimm den Kalender. Wenn du erst einordnen willst: die fünf Fragen. Wenn du erst sortieren möchtest: schreib uns. Alles landet persönlich bei Jay.</p>
 
-      <div class="knopf-reihe auf" style="margin-top:34px">
-        <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten im Kalender <span>&rarr;</span></a>
+      <div class="kontakt-raster">
+        <div>
+          <div class="handlung" style="margin-top:0">
+            <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten im Kalender <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <ol class="danach" aria-label="Was nach dem Klick passiert">
+            <li><b>Du wählst einen Slot.</b> Direkt im Kalender, kein Zwischenformular. Du bekommst sofort eine Bestätigung mit Videolink. Vorbereitung brauchst du keine.</li>
+            <li><b>Wir sprechen 30 Minuten.</b> Wir fragen, du erzählst. Kein Pitch, keine Folien. Am Ende sagen wir dir, was wir sehen, auch wenn das heißt, dass du uns nicht brauchst.</li>
+            <li><b>Du bekommst es schriftlich.</b> Innerhalb von zwei Werktagen eine Seite: was wir verstanden haben, was wir vorschlagen, was es kostet. Ohne Nachfassen, ohne Verkaufsstrecke.</li>
+          </ol>
+        </div>
+
+        <aside class="check" id="selbst" aria-labelledby="h-selbst"><span id="standort" class="anker-alt" aria-hidden="true"></span>
+          <h3 id="h-selbst">Noch nicht sicher? Fünf Fragen, ehrlich beantwortet.</h3>
+          <p class="einleitung">Keine Mailadresse, kein Lead-Formular dahinter. Die Einordnung passiert in deinem Browser und verlässt dein Gerät nicht. Sie sagt dir, ob ein Gespräch sich lohnt.</p>
+          <div id="check">
+            <div class="check-frage"><p><b>1.</b> Es gibt eine schriftliche Regelung, was mit KI-Werkzeugen erlaubt ist, und die Leute kennen sie.</p><div class="wahl" role="group" aria-label="Frage 1"><button type="button" data-f="0" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="0" data-w="0" aria-pressed="false">Nein</button></div></div>
+            <div class="check-frage"><p><b>2.</b> Mindestens eine Führungskraft im Haus arbeitet selbst regelmäßig mit KI, nicht nur darüber.</p><div class="wahl" role="group" aria-label="Frage 2"><button type="button" data-f="1" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="1" data-w="0" aria-pressed="false">Nein</button></div></div>
+            <div class="check-frage"><p><b>3.</b> Wir könnten benennen, welcher Arbeitsschritt durch KI konkret schneller oder besser geworden ist.</p><div class="wahl" role="group" aria-label="Frage 3"><button type="button" data-f="2" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="2" data-w="0" aria-pressed="false">Nein</button></div></div>
+            <div class="check-frage"><p><b>4.</b> Wir wissen, welche KI-Systeme bei uns im Einsatz sind, auch die, die sich niemand offiziell genehmigt hat.</p><div class="wahl" role="group" aria-label="Frage 4"><button type="button" data-f="3" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="3" data-w="0" aria-pressed="false">Nein</button></div></div>
+            <div class="check-frage"><p><b>5.</b> Für die KI-Kompetenzpflicht aus dem EU AI Act könnten wir einen Nachweis vorlegen, wenn jemand fragt.</p><div class="wahl" role="group" aria-label="Frage 5"><button type="button" data-f="4" data-w="1" aria-pressed="false">Ja</button><button type="button" data-f="4" data-w="0" aria-pressed="false">Nein</button></div></div>
+            <div class="check-ergebnis" id="check-ergebnis" hidden>
+              <h4 id="check-titel"></h4>
+              <p id="check-text"></p>
+              <a class="knopf" id="check-knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">Darüber 30 Minuten sprechen <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+          <p class="check-hinweis">Ohne JavaScript bleibt die Einordnung aus. Die Fragen selbst sind trotzdem die richtigen: Nimm sie mit ins Gespräch.</p>
+        </aside>
+
+        <div class="bogen-rahmen">
+        <form class="bogen" id="bogen" novalidate>
+          <p class="bogen-titel">Lieber erst schreiben?</p>
+          <div class="feld-paar">
+            <label class="feld"><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="optional"></label>
+            <label class="feld"><span>E-Mail <b>*</b></span><input type="email" name="email" autocomplete="email" required placeholder="damit wir antworten können"></label>
+          </div>
+          <div class="feld-paar">
+            <label class="feld"><span>Organisation</span><input type="text" name="firma" autocomplete="organization" placeholder="optional"></label>
+            <label class="feld"><span>Worum geht es?</span>
+              <select name="thema">
+                <option value="">bitte wählen</option>
+                <option>Diagnostik für die Organisation</option>
+                <option>Befähigung des Führungsteams</option>
+                <option>Externer KI-Beauftragter</option>
+                <option>AI-Act-Fahrplan</option>
+                <option>Sanierungsbericht / IBR</option>
+                <option>Weiß ich noch nicht</option>
+              </select>
+            </label>
+          </div>
+          <label class="feld"><span>Was steht bei euch an?</span><textarea name="msg" rows="3" placeholder="Ein paar Sätze genügen."></textarea></label>
+          <div class="honig" aria-hidden="true"><label>Bitte nicht ausfüllen<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <button class="knopf" type="submit" id="senden" style="justify-self:start">Anfrage senden <span aria-hidden="true">&rarr;</span></button>
+          <p class="hinweis" id="bogen-status" role="status" aria-live="polite"></p>
+          <p class="hinweis klein">Deine Angaben nutzen wir ausschließlich für die Rückmeldung und geben sie nicht weiter. Kein Newsletter. <a href="datenschutz.html">Datenschutz</a>.</p>
+        </form>
+        <noscript>
+          <p class="direkt">Für das Formular wird JavaScript benötigt. Schreib uns stattdessen direkt an <a href="mailto:jay@aivantum.com">jay@aivantum.com</a> oder wähle gleich einen <a href="https://calendar.app.google/VPussJNynjUDuBJFA">Termin im Kalender</a>.</p>
+        </noscript>
+        </div>
       </div>
-
-      <form class="bogen auf" id="bogen" novalidate>
-        <div class="feld-paar">
-          <label class="feld">
-            <span>Name</span>
-            <input type="text" name="name" autocomplete="name" placeholder="optional">
-          </label>
-          <label class="feld">
-            <span>E-Mail <b>*</b></span>
-            <input type="email" name="email" autocomplete="email" required placeholder="damit wir antworten können">
-          </label>
-        </div>
-        <div class="feld-paar">
-          <label class="feld">
-            <span>Organisation</span>
-            <input type="text" name="firma" autocomplete="organization" placeholder="optional">
-          </label>
-          <label class="feld">
-            <span>Worum geht es?</span>
-            <select name="thema">
-              <option value="">bitte wählen</option>
-              <option>Diagnostik für die Organisation</option>
-              <option>Befähigung des Führungsteams</option>
-              <option>Externer KI-Beauftragter</option>
-              <option>AI-Act-Fahrplan</option>
-              <option>Sanierungsbericht / IBR</option>
-              <option>Weiß ich noch nicht</option>
-            </select>
-          </label>
-        </div>
-        <label class="feld">
-          <span>Was steht bei euch an?</span>
-          <textarea name="msg" rows="4" placeholder="Ein paar Sätze genügen. Was gerade ansteht, reicht völlig."></textarea>
-        </label>
-
-        <div class="honig" aria-hidden="true">
-          <label>Bitte nicht ausfüllen<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        </div>
-
-        <button class="knopf" type="submit" id="senden">Anfrage senden <span>&rarr;</span></button>
-        <p class="hinweis" id="bogen-status" role="status" aria-live="polite"></p>
-        <p class="hinweis klein">Deine Angaben nutzen wir ausschließlich für die Rückmeldung und geben sie nicht weiter. Kein Newsletter. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-      </form>
-
-      <noscript>
-        <p class="direkt">Für das Formular wird JavaScript benötigt. Schreib mir stattdessen direkt an <a href="mailto:jay@aivantum.com">jay@aivantum.com</a> — oder wähle gleich einen <a href="https://calendar.app.google/VPussJNynjUDuBJFA">Termin im Kalender</a>.</p>
-      </noscript>
     </div>
   </section>
 </main>
+</div>
 
+<span id="unterlagen" class="anker-alt" aria-hidden="true"></span>
 <footer class="fuss">
   <div>© 2026 AIVantum · Jay Manuzon · <a href="mailto:jay@aivantum.com">jay@aivantum.com</a></div>
-  <nav>
-    <a href="https://check.aivantum.com" target="_blank" rel="noopener">Team-Check</a>
-    <a href="https://gallery.aivantum.com" target="_blank" rel="noopener">Die Instrumente</a>
-    <a href="https://ai-act.aivantum.com" target="_blank" rel="noopener">AI-Act-Fahrplan</a>
-    <a href="https://oldschool.aivantum.com" target="_blank" rel="noopener">Wissenssicherung</a>
+  <nav aria-label="Fußnavigation">
+    <a href="unterlagen.html">Unterlagen</a>
     <a href="https://coachjay.de" target="_blank" rel="noopener">Coaching: coachjay.de</a>
     <a href="https://www.linkedin.com/company/aivantum/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://www.instagram.com/ai_vantum/" target="_blank" rel="noopener">Instagram</a>
-    <a href="unterlagen.html">Unterlagen</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
   </nav>
-  <div class="fuss-einstiege"><span>Direkt</span><a href="https://restart.aivantum.com/">aivantum.com/restart</a><a href="https://entry.aivantum.com/">aivantum.com/entry</a><a href="https://tomo.aivantum.com/">tomo.aivantum.com</a></div>
 </footer>
 
 <script>
-/* Progressive Enhancement: Der gesamte Kerninhalt oben steht statisch im HTML.
-   Dieses Skript fügt nur hinzu — Reveal, Kopfleiste, Selbst-Check, Formularversand.
-   Ohne JavaScript bleibt die Seite vollständig lesbar und der Kalender-Link nutzbar. */
-(function () {
+/* Progressive Enhancement: Inhalt steht statisch im HTML. Das Skript fuegt nur hinzu. */
+(function(){
   "use strict";
-  var doc = document.documentElement;
-  doc.className += " js";
+  var heute=new Date();
+  var stand=(location.search.match(/stand=([\w-]+)/)||[])[1];
+  if(stand==="ab-30-09") heute=new Date("2026-09-30T09:00:00");
 
-  /* ---- Reveal beim Scrollen ---- */
-  var aufs = document.querySelectorAll(".auf");
-  if ("IntersectionObserver" in window) {
-    var beo = new IntersectionObserver(function (eintraege) {
-      eintraege.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("da"); beo.unobserve(e.target); }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
-    Array.prototype.forEach.call(aufs, function (el) { beo.observe(el); });
-  } else {
-    Array.prototype.forEach.call(aufs, function (el) { el.classList.add("da"); });
+  /* Ankuendigungszeile: ZP bis 29.09., ab 30.09. Tomo bis 31.10. */
+  var zp=document.getElementById("ansage-zp"), tomo=document.getElementById("ansage-tomo");
+  function nach(el,attr){var d=el&&el.getAttribute(attr);return d&&heute>new Date(d+"T23:59:59");}
+  function ab(el){var d=el&&el.getAttribute("data-ab");return d&&heute>=new Date(d+"T00:00:00");}
+  if(zp&&nach(zp,"data-bis")) zp.hidden=true;
+  if(tomo&&ab(tomo)&&!nach(tomo,"data-bis")) tomo.hidden=false;
+  /* "Neu"-Marken laufen wie live am 31.10. aus */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-bis]"),function(el){
+    if(el===zp||el===tomo||!nach(el,"data-bis")) return;
+    if(el.classList.contains("neu")&&el.tagName==="A") el.classList.remove("neu"); else el.remove();
+  });
+  /* Prototyp-Umschalter */
+  var um=document.getElementById("proto-umschalter");
+  if(um&&stand==="ab-30-09"){um.textContent="Ansicht heute";um.setAttribute("href","?");}
+
+  /* Kopf: nur am Desktop fest, und erst nach der Buehne */
+  var kopf=document.getElementById("kopf"), buehne=document.querySelector(".buehne");
+  var mq=window.matchMedia("(min-width:901px)");
+  function pruefen(){
+    if(!kopf||!buehne) return;
+    var grenze=buehne.getBoundingClientRect().bottom;
+    if(mq.matches && grenze<70) kopf.classList.add("fest"); else kopf.classList.remove("fest");
   }
+  window.addEventListener("scroll",pruefen,{passive:true});
+  window.addEventListener("resize",pruefen);
+  pruefen();
 
-  /* ---- Kopfleiste wird fest, sobald die Bühne durch ist ---- */
-  var kopf = document.getElementById("kopf");
-  var buehne = document.querySelector(".buehne");
-  function kopfPruefen() {
-    if (!kopf || !buehne) return;
-    var grenze = buehne.offsetHeight - 90;
-    if (window.scrollY > grenze) kopf.classList.add("fest");
-    else kopf.classList.remove("fest");
-  }
-  var warte = false;
-  window.addEventListener("scroll", function () {
-    if (warte) return;
-    warte = true;
-    window.requestAnimationFrame(function () { kopfPruefen(); warte = false; });
-  }, { passive: true });
-  kopfPruefen();
+  /* Menue mobil: nach Klick auf einen Anker schliessen */
+  var menue=document.querySelector(".menue");
+  if(menue) menue.addEventListener("click",function(ev){ if(ev.target.closest&&ev.target.closest("a")) menue.open=false; });
 
-  /* ---- Selbst-Check: rein lokal, nichts verlässt das Gerät ---- */
-  var check = document.getElementById("check");
-  if (check) {
-    var antworten = [null, null, null, null, null];
-    var kasten = document.getElementById("check-ergebnis");
-    var titel = document.getElementById("check-titel");
-    var text = document.getElementById("check-text");
+  /* Weiche: immer nur eine Tuer offen (auch in Browsern ohne details[name]); Deep-Link #tuer-… oeffnet */
+  var tueren=document.querySelectorAll(".tuer");
+  Array.prototype.forEach.call(tueren,function(t){
+    t.addEventListener("toggle",function(){ if(!t.open) return; Array.prototype.forEach.call(tueren,function(o){ if(o!==t) o.open=false; }); });
+  });
+  if(location.hash.indexOf("#tuer-")===0){ var z=document.getElementById(location.hash.slice(1)); if(z) z.open=true; }
 
-    var stufen = [
-      { ab: 0, titel: "Am Anfang — und das ist ehrlich gesagt der Normalfall.",
-        text: "Bei dir ist noch nichts geregelt, gemessen oder verankert. Das ist kein Versäumnis, sondern der Zustand der meisten Häuser. Der günstigste erste Schritt ist die Befähigung des Führungsteams: zwei bis zehn Personen, ab 800 €, inklusive Diagnostik. Danach weißt du, worüber ihr überhaupt entscheiden müsst." },
-      { ab: 2, titel: "Erste Bewegung da, aber sie hängt an Einzelnen.",
-        text: "Ein paar Dinge laufen, meist getragen von wenigen Motivierten. Genau hier versandet es erfahrungsgemäß, sobald diese Personen im Urlaub sind. Was jetzt trägt, ist die Diagnostik über mehrere Ebenen: sie zeigt, wo Wert entsteht und was davon vom System und nicht von Personen abhängt." },
-      { ab: 4, titel: "Weit vorne — bei dir geht es ums Absichern und Skalieren.",
-        text: "Ihr habt Regeln, Praxis und Nachweise. Interessant wird für dich weniger der Einstieg als die Verankerung und der formale Teil: Inventar, Kennzeichnungspflicht ab dem 2. August 2026, laufendes Monitoring. Dafür gibt es den externen KI-Beauftragten ab 490 € im Monat." }
+  /* Fuer wen: "Eher nicht" auf Mobil eingeklappt, ab 760 px offen */
+  var eherNicht=document.getElementById("eher-nicht");
+  if(eherNicht && window.matchMedia("(min-width:760px)").matches) eherNicht.open=true;
+
+  /* Selbst-Check: rein lokal. Ergebnistexte aus der Live-Seite, Datum und Du/Ihr-Bruch korrigiert */
+  var check=document.getElementById("check");
+  if(check){
+    var antworten=[null,null,null,null,null];
+    var kasten=document.getElementById("check-ergebnis"), titel=document.getElementById("check-titel"), text=document.getElementById("check-text");
+    var stufen=[
+      {ab:0,knopf:"Über den Einstieg sprechen",titel:"Am Anfang, und das ist ehrlich gesagt der Normalfall.",text:"Bei dir ist noch nichts geregelt, gemessen oder verankert. Das ist kein Versäumnis, sondern der Zustand der meisten Häuser. Der günstigste erste Schritt ist die Befähigung des Führungsteams: zwei bis zehn Personen, ab 800 €, inklusive Diagnostik."},
+      {ab:2,knopf:"Über die Diagnostik sprechen",titel:"Erste Bewegung da, aber sie hängt an Einzelnen.",text:"Ein paar Dinge laufen, meist getragen von wenigen Motivierten. Was jetzt trägt, ist die Diagnostik über mehrere Ebenen: sie zeigt, wo Wert entsteht und was davon vom System und nicht von Personen abhängt."},
+      {ab:4,knopf:"Über die Rolle sprechen",titel:"Weit vorne: bei dir geht es ums Absichern und Skalieren.",text:"Bei dir gibt es Regeln, Praxis und Nachweise. Interessant wird für dich weniger der Einstieg als die Verankerung und der formale Teil: Inventar, Kennzeichnungspflicht, laufendes Monitoring. Dafür gibt es den externen KI-Beauftragten ab 490 € im Monat."}
     ];
-
-    function auswerten() {
-      var beantwortet = antworten.filter(function (a) { return a !== null; }).length;
-      if (beantwortet < 5) return;
-      var punkte = antworten.reduce(function (s, a) { return s + a; }, 0);
-      var stufe = stufen[0];
-      for (var i = 0; i < stufen.length; i++) { if (punkte >= stufen[i].ab) stufe = stufen[i]; }
-      titel.textContent = stufe.titel + " (" + punkte + " von 5)";
-      text.textContent = stufe.text;
-      kasten.hidden = false;
-    }
-
-    check.addEventListener("click", function (ev) {
-      var knopf = ev.target.closest ? ev.target.closest("button[data-f]") : null;
-      if (!knopf) return;
-      var frage = parseInt(knopf.getAttribute("data-f"), 10);
-      var wert = parseInt(knopf.getAttribute("data-w"), 10);
-      var gruppe = knopf.parentNode.querySelectorAll("button");
-      Array.prototype.forEach.call(gruppe, function (b) { b.setAttribute("aria-pressed", "false"); });
-      knopf.setAttribute("aria-pressed", "true");
-      antworten[frage] = wert;
-      auswerten();
+    check.addEventListener("click",function(ev){
+      var k=ev.target.closest?ev.target.closest("button[data-f]"):null;
+      if(!k) return;
+      var f=parseInt(k.getAttribute("data-f"),10), w=parseInt(k.getAttribute("data-w"),10);
+      Array.prototype.forEach.call(k.parentNode.querySelectorAll("button"),function(b){b.setAttribute("aria-pressed","false");});
+      k.setAttribute("aria-pressed","true");
+      antworten[f]=w;
+      if(antworten.indexOf(null)!==-1) return;
+      var p=antworten.reduce(function(s,a){return s+a;},0), s=stufen[0];
+      for(var i=0;i<stufen.length;i++){ if(p>=stufen[i].ab) s=stufen[i]; }
+      titel.textContent=s.titel+" ("+p+" von 5)";
+      text.textContent=s.text;
+      var kk=document.getElementById("check-knopf"); if(kk) kk.firstChild.nodeValue=s.knopf+" ";
+      kasten.hidden=false;
     });
   }
 
   /* ---- Anfrage-Formular ---- */
   var ENDPUNKT = "https://aivantum-check.aivantum.workers.dev/kontakt";
   var bogen = document.getElementById("bogen");
-  if (!bogen) return;
+  if (bogen) {
   var status = document.getElementById("bogen-status");
   var knopfSenden = document.getElementById("senden");
 
@@ -1243,12 +963,8 @@ body{padding-top:var(--zp-h)}
       sag("Keine Verbindung zum Server. Schreib mir bitte direkt an jay@aivantum.com — oder wähle gleich einen Termin im Kalender.", "schlecht");
     });
   });
+  }
 })();
 </script>
-<!-- TOMO-EINSTIEG-2026-09-20 -->
-
-<script>/* TOMO-STICKER-2026-09-20 */(function(){var e=document.querySelector('.sticker-zeile[data-bis]');if(e&&new Date()>new Date(e.getAttribute('data-bis')+'T23:59:59'))e.remove();})();</script>
-<!-- TOMO-STICKER-2026-09-20 -->
-<!-- PAPER-LAGE-2026-09-20 -->
 </body>
 </html>

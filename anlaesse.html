@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anlässe und Unterlagen · AIVantum</title>
+<link rel="icon" href="assets/favicon.png">
+<style>
+/* Stand 23.09.2026: Relaunch nach Konzept Runde 2 (Vantum HQ/2026-09-23-landingpage-konzept). */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cormorant-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/cormorant-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(fonts/cormorant-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hanken-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0,U+A720-A7FF}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --tief:#111b2e; --tief-2:#1a2942; --tief-3:#0d1626;
+  --creme:#fbf7ef; --creme-2:#f2ecdf;
+  --tinte:#16233c; --tinte-weich:#5a6580;
+  --akzent:#1a6259; --akzent-hell:#4aa79a;
+  --linie:#e7dfcf; --linie-dunkel:rgba(251,247,239,.15);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --grotesk:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --rand:clamp(20px,5vw,88px);
+  --kurve:cubic-bezier(.2,.7,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--tinte);font-family:var(--grotesk);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2.5px solid var(--akzent-hell);outline-offset:3px;border-radius:2px}
+
+/* ---------- Prototyp-Hinweis (statisch, scrollt weg) ---------- */
+.proto{background:#2a2346;color:#e9e2ff;font-size:13px;line-height:1.4;padding:8px var(--rand);text-align:center}
+.proto b{color:#fff}
+.proto a{color:#fff}
+
+/* ---------- Typografie ---------- */
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,6.6vw,92px);line-height:1.0;letter-spacing:-.017em;color:var(--creme)}
+h1 em{font-style:italic;color:var(--akzent-hell)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.2vw,58px);line-height:1.05;letter-spacing:-.016em;margin-top:16px;max-width:16em}
+h3{font-family:var(--serif);font-weight:500;font-size:clamp(23px,2.1vw,29px);line-height:1.16}
+.augenbraue{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--akzent)}
+.dunkel .augenbraue{color:var(--akzent-hell)}
+.blei{font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:34em;color:var(--tinte-weich);margin-top:16px}
+.dunkel .blei{color:rgba(251,247,239,.76)}
+
+/* ---------- Bänder ---------- */
+.band{padding:clamp(60px,8vw,112px) var(--rand)}
+.hell{background:var(--creme)}
+.hell-2{background:var(--creme-2)}
+.dunkel{background:var(--tief);color:var(--creme)}
+.dunkel h2,.dunkel h3{color:var(--creme)}
+.innen{max-width:1180px;margin:0 auto}
+.eng{max-width:780px}
+
+/* ---------- Kopf: nicht fest auf Mobil; am Desktop schlanke feste Leiste nach der Bühne ---------- */
+.kopf{position:absolute;top:auto;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--rand)}
+.marke{position:relative;display:block;height:26px;width:126px;flex:0 0 auto}
+.marke img{position:absolute;left:0;top:0;height:100%;width:auto}
+.marke .marke-dunkel{opacity:0}
+.kopf-nav{display:none}
+.kopf-knopf{display:none}
+@media (min-width:901px){
+  .kopf{padding:18px var(--rand)}
+  .marke{height:30px;width:146px}
+  .kopf-nav{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .kopf-nav a{font-size:14.5px;font-weight:600;color:var(--creme);text-decoration:none;padding:9px 14px;border-radius:999px}
+  .kopf-nav a:hover{background:rgba(251,247,239,.1)}
+  .kopf-knopf{display:inline-block;font-size:14.5px;font-weight:600;text-decoration:none;color:var(--creme);border:1px solid var(--linie-dunkel);padding:9px 18px;border-radius:999px;white-space:nowrap}
+  .kopf-knopf:hover{background:var(--creme);color:var(--tief)}
+  .kopf.fest{position:fixed;top:0;background:rgba(251,247,239,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--linie);padding-top:10px;padding-bottom:10px}
+  .kopf.fest .marke-hell{opacity:0}
+  .kopf.fest .marke-dunkel{opacity:1}
+  .kopf.fest .kopf-nav a{color:var(--tinte)}
+  .kopf.fest .kopf-nav a:hover{background:rgba(22,35,60,.06)}
+  .kopf.fest .kopf-knopf{background:var(--akzent);border-color:var(--akzent)}
+}
+
+/* ---------- Bühne (mobil zuerst: Bild oben, Text darunter) ---------- */
+.buehne{position:relative;background:var(--tief);display:grid;grid-template-columns:1fr}
+.buehne-bild{position:relative;overflow:hidden;height:42vh;min-height:260px;max-height:420px}
+.buehne-bild img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.buehne-bild::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--tief) 0%,rgba(17,27,46,.25) 42%,rgba(17,27,46,.45) 100%)}
+.buehne-text{padding:8px var(--rand) 48px;position:relative;z-index:2}
+.buehne .augenbraue{color:var(--akzent-hell)}
+.buehne h1{margin-top:14px}
+.unterzeile{margin-top:20px;font-size:clamp(17px,1.35vw,20px);line-height:1.58;max-width:30em;color:rgba(251,247,239,.8)}
+.handlung{display:flex;flex-direction:column;align-items:stretch;gap:14px;margin-top:28px}
+.knopf{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--akzent-hell);color:#08201d;font-family:var(--grotesk);font-size:16px;font-weight:700;text-decoration:none;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .35s var(--kurve),background .35s var(--kurve)}
+.knopf:hover{transform:translateY(-2px);background:var(--creme)}
+.leise{color:rgba(251,247,239,.82);font-size:15.5px;font-weight:600;text-decoration:underline;text-decoration-color:rgba(251,247,239,.3);text-underline-offset:5px;text-align:center}
+.leise:hover{text-decoration-color:var(--akzent-hell)}
+.buehne-fuss{margin-top:30px;display:flex;align-items:center;gap:11px;font-size:13px;letter-spacing:.04em;color:rgba(251,247,239,.55)}
+.buehne-fuss i{display:block;width:24px;height:1px;background:rgba(251,247,239,.4)}
+@media (min-width:901px){
+  .buehne{grid-template-columns:1.1fr .9fr;min-height:min(100svh,900px)}
+  .buehne-bild{order:2;height:auto;max-height:none}
+  .buehne-bild::after{background:linear-gradient(90deg,var(--tief) 0%,rgba(17,27,46,.35) 26%,transparent 62%)}
+  .buehne-text{display:flex;flex-direction:column;justify-content:center;padding:120px var(--rand) 72px}
+  .handlung{flex-direction:row;align-items:center;gap:26px}
+  .leise{text-align:left}
+}
+
+/* ---------- Für wen: Zwei-Spalten-Zeile direkt unter der Bühne ---------- */
+.fuer-wen{background:var(--creme-2);padding:clamp(40px,5vw,64px) var(--rand)}
+.fuer-wen-raster{display:grid;grid-template-columns:1fr;gap:26px;margin-top:18px}
+.fuer-wen h3{font-size:22px}
+@media (min-width:760px){.fuer-wen-raster{grid-template-columns:1fr 1fr;gap:48px}}
+
+/* ---------- Listen ---------- */
+.liste{list-style:none;margin-top:14px;display:grid;gap:10px}
+.liste li{position:relative;padding-left:28px;font-size:16px;line-height:1.55}
+.liste li::before{content:"";position:absolute;left:0;top:.66em;width:14px;height:1.5px;background:var(--akzent)}
+.liste.nein li::before{background:var(--tinte-weich);opacity:.45}
+.dunkel .liste li::before{background:var(--akzent-hell)}
+
+/* ---------- Warum ---------- */
+.warum-raster{display:grid;grid-template-columns:1fr;gap:34px;margin-top:34px}
+@media (min-width:860px){.warum-raster{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}}
+.leitsatz{border-left:3px solid var(--akzent-hell);padding-left:clamp(18px,2.4vw,30px)}
+.leitsatz p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(25px,2.8vw,40px);line-height:1.16;letter-spacing:-.012em}
+.textlink{display:inline-block;margin-top:22px;color:var(--akzent);font-weight:700;text-decoration:underline;text-decoration-color:var(--linie);text-underline-offset:6px}
+.dunkel .textlink{color:var(--akzent-hell);text-decoration-color:rgba(251,247,239,.2)}
+
+/* ---------- Wie: drei Bewegungen ---------- */
+.weg{display:grid;grid-template-columns:1fr;margin-top:34px}
+.halt{padding:22px 0 8px;border-top:1px solid var(--linie-dunkel)}
+.zahl{font-family:var(--serif);font-size:clamp(46px,5vw,80px);line-height:.9;color:var(--akzent-hell)}
+.halt h3{margin-top:10px}
+.halt p{margin-top:10px;font-size:16px;line-height:1.6;color:rgba(251,247,239,.74)}
+.zeit{margin-top:14px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(251,247,239,.5);font-weight:600}
+@media (min-width:860px){
+  .weg{grid-template-columns:repeat(3,1fr);border-top:1px solid var(--linie-dunkel)}
+  .halt{border-top:0;border-right:1px solid var(--linie-dunkel);padding:30px clamp(18px,2.2vw,34px) 8px}
+  .halt:first-child{padding-left:0}
+  .halt:last-child{border-right:0}
+}
+
+/* ---------- Einwände ---------- */
+.einwaende{margin-top:30px}
+.einwand{border-top:1px solid var(--linie);padding:18px 0}
+.einwand summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;font-family:var(--serif);font-size:clamp(20px,1.8vw,26px);line-height:1.25;font-weight:500}
+.einwand summary::-webkit-details-marker{display:none}
+.einwand summary::after{content:"+";font-family:var(--grotesk);font-size:24px;line-height:1;color:var(--akzent);transition:transform .3s var(--kurve);flex:0 0 auto}
+.einwand[open] summary::after{transform:rotate(45deg)}
+.einwand p{margin-top:12px;color:var(--tinte-weich);font-size:16px}
+.mehr{border-top:1px solid var(--linie);border-bottom:1px solid var(--linie)}
+.mehr>summary{cursor:pointer;list-style:none;padding:16px 0;font-size:15px;font-weight:700;color:var(--akzent)}
+.mehr>summary::-webkit-details-marker{display:none}
+.mehr[open]>summary{padding-bottom:4px}
+.mehr .einwand:first-of-type{border-top:0}
+
+/* ---------- Treppe ---------- */
+.treppe{display:grid;grid-template-columns:1fr;gap:18px;margin-top:34px}
+@media (min-width:900px){.treppe{grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}}
+.stufe{background:var(--creme);border:1px solid var(--linie);border-radius:18px;padding:clamp(22px,2.2vw,30px);display:flex;flex-direction:column}
+.stufe.markiert{border-color:var(--akzent);border-width:1.5px}
+.stufe-kopf{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--creme-2);color:var(--tinte-weich);border:1px solid var(--linie)}
+.chip.akzent{background:rgba(26,98,89,.1);color:var(--akzent);border-color:rgba(26,98,89,.28)}
+.stufe h3{margin-top:14px}
+.stufe p{margin-top:10px;font-size:15.5px;line-height:1.58;color:var(--tinte-weich)}
+.preis{margin-top:auto;padding-top:18px}
+.preis b{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em}
+.preis small{display:block;font-size:14px;color:var(--tinte-weich);margin-top:2px}
+.staffel{margin-top:8px;font-size:14.5px;color:var(--tinte-weich)}
+.staffel summary{cursor:pointer;font-weight:600;color:var(--tinte)}
+.staffel div{margin-top:6px;line-height:1.7}
+.stufe .textlink{margin-top:16px;font-size:15px}
+.anlass{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding-top:24px;border-top:1px solid var(--linie)}
+.anlass>span{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--tinte-weich);margin-right:4px;flex-basis:100%}
+.anlass a{font-size:15px;line-height:1.3;text-decoration:none;color:var(--tinte);padding:8px 14px;border-radius:999px;border:1px solid var(--linie);background:var(--creme)}
+.anlass a:hover{border-color:var(--akzent)}
+.anlass a.neu::after{content:"neu";margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--akzent)}
+.anlass a.alle{border-color:transparent;background:none;color:var(--akzent);font-weight:700;padding-left:4px}
+@media (min-width:760px){.anlass>span{flex-basis:auto}}
+
+/* ---------- Wer ---------- */
+.wer-raster{display:grid;grid-template-columns:1fr;gap:30px;margin-top:30px}
+@media (min-width:900px){.wer-raster{grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}}
+.wer-bild{border-radius:16px;overflow:hidden}
+.wer-bild img{width:100%;height:clamp(200px,24vw,320px);object-fit:cover;object-position:50% 20%}
+.wer .blei{max-width:none}
+.belege{margin-top:22px}
+.belege li{font-size:15px;color:rgba(251,247,239,.8)}
+
+/* ---------- Kontakt ---------- */
+.kontakt-raster{display:grid;grid-template-columns:1fr;gap:26px;margin-top:34px}
+@media (min-width:980px){.kontakt-raster{grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
+.danach{list-style:none;margin-top:26px;display:grid;gap:14px;counter-reset:d}
+.danach li{position:relative;padding-left:44px;font-size:15.5px;line-height:1.5;color:rgba(251,247,239,.76)}
+.danach li b{color:var(--creme);font-weight:600}
+.danach li::before{counter-increment:d;content:"0" counter(d);position:absolute;left:0;top:-4px;font-family:var(--serif);font-size:26px;color:var(--akzent-hell)}
+.bogen{margin-top:30px;display:grid;gap:16px;padding-top:26px;border-top:1px solid var(--linie-dunkel)}
+.bogen-titel{font-family:var(--serif);font-size:24px;font-weight:500}
+.feld-paar{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:620px){.feld-paar{grid-template-columns:1fr 1fr}}
+.feld{display:grid;gap:6px}
+.feld>span{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(251,247,239,.62)}
+.feld>span b{color:var(--akzent-hell)}
+.feld input,.feld textarea,.feld select{width:100%;font-family:var(--grotesk);font-size:16px;color:var(--creme);background:rgba(251,247,239,.05);border:1px solid var(--linie-dunkel);border-radius:12px;padding:12px 15px}
+.feld textarea{resize:vertical;min-height:100px}
+.feld input::placeholder,.feld textarea::placeholder{color:rgba(251,247,239,.4)}
+.feld select option{background:var(--tief);color:var(--creme)}
+.hinweis{font-size:14.5px;color:rgba(251,247,239,.66)}
+.hinweis.klein{font-size:13.5px;color:rgba(251,247,239,.55)}
+.hinweis.gut{color:var(--akzent-hell)}
+.check{background:var(--tief-2);border-radius:20px;padding:clamp(22px,2.6vw,34px)}
+.check h3{font-size:clamp(24px,2.2vw,30px)}
+.check .einleitung{margin-top:8px;font-size:15px;color:rgba(251,247,239,.72)}
+.check-frage{border-bottom:1px solid var(--linie-dunkel);padding:14px 0;display:grid;gap:10px}
+.check-frage:last-of-type{border-bottom:0}
+.check-frage p{font-size:15.5px;line-height:1.5;color:var(--creme)}
+.wahl{display:flex;gap:8px}
+.wahl button{flex:1;font-family:var(--grotesk);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;border:1px solid var(--linie-dunkel);background:transparent;color:rgba(251,247,239,.85);cursor:pointer}
+.wahl button[aria-pressed="true"]{background:var(--akzent-hell);border-color:var(--akzent-hell);color:#08201d}
+@media (min-width:620px){.wahl button{flex:0 0 auto}}
+.check-ergebnis{margin-top:18px;padding:18px 20px;border-radius:14px;background:rgba(74,167,154,.12);border:1px solid rgba(74,167,154,.35)}
+.check-ergebnis h4{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.2}
+.check-ergebnis p{margin-top:8px;color:rgba(251,247,239,.85);font-size:15.5px}
+.check-hinweis{margin-top:12px;font-size:13.5px;color:rgba(251,247,239,.55)}
+
+/* ---------- Fuß ---------- */
+.fuss{background:var(--tief-3);color:rgba(251,247,239,.62);padding:36px var(--rand);display:flex;flex-wrap:wrap;gap:16px 30px;align-items:center;justify-content:space-between;font-size:14.5px}
+.fuss a{color:rgba(251,247,239,.85);text-decoration:none}
+.fuss a:hover{text-decoration:underline}
+.fuss nav{display:flex;flex-wrap:wrap;gap:10px 20px}
+
+/* Raster-Kinder dürfen schrumpfen (sonst drückt ein ungeladenes Bild die Spalte breit) */
+.fuer-wen-raster>*,.warum-raster>*,.weg>*,.treppe>*,.wer-raster>*,.kontakt-raster>*{min-width:0}
+.wer-bild img{max-width:100%}
+@media (min-width:520px){.handlung .knopf{align-self:flex-start}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.knopf{transition:none}}
+
+/* ---------- Unterseite Anlässe & Unterlagen ---------- */
+.kopf-hell{position:absolute}
+.zurueck{font-size:14.5px;font-weight:600;color:var(--tinte);text-decoration:none}
+.zurueck:hover{color:var(--akzent)}
+.tueren-liste{margin-top:30px;border-top:1px solid var(--linie)}
+.tuer{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 16px;padding:20px 0;border-bottom:1px solid var(--linie);text-decoration:none;color:var(--tinte)}
+.tuer-titel{grid-column:1;font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.4vw,34px);line-height:1.1}
+.tuer-text{grid-column:1;font-size:15.5px;line-height:1.55;color:var(--tinte-weich)}
+.tuer-text .adresse{display:block;margin-top:6px;font-size:13.5px;font-weight:600;color:var(--akzent)}
+.tuer-text .hier{display:block;margin-top:6px;font-size:13.5px;font-weight:600;color:var(--tinte-weich)}
+.tuer-pfeil,.tuer .chip{grid-column:2;grid-row:1 / span 2;font-size:22px;color:var(--akzent)}
+.tuer .chip{font-size:11px}
+.tuer:hover .tuer-titel{color:var(--akzent)}
+@media (min-width:860px){
+  .tuer{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;gap:10px 36px;padding:24px 0}
+  .tuer-titel,.tuer-text{grid-column:auto}
+  .tuer-pfeil,.tuer .chip{grid-column:auto;grid-row:auto}
+}
+.fussnote{margin-top:24px;font-size:14px;line-height:1.6;color:var(--tinte-weich);max-width:62em}
+.fussnote a{color:var(--akzent)}
+.pdf-liste{list-style:none;margin-top:28px;display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){.pdf-liste{grid-template-columns:1fr 1fr}}
+.pdf-liste a{display:block;height:100%;background:var(--creme);border:1px solid var(--linie);border-radius:16px;padding:20px 22px;text-decoration:none;color:var(--tinte)}
+.pdf-liste a:hover{border-color:var(--akzent)}
+.pdf-liste b{display:block;font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.15}
+.pdf-liste span{display:block;margin-top:6px;font-size:15px;color:var(--tinte-weich)}
+</style>
+</head>
+<body>
+
+<header class="kopf kopf-hell">
+  <a class="marke" href="index.html" aria-label="AIVantum, zur Startseite">
+    <img class="marke-dunkel" style="opacity:1" src="assets/aivantum-lockup-tinte.png" alt="AIVantum" width="972" height="200">
+  </a>
+  <a class="zurueck" href="index.html"><span aria-hidden="true">&larr;</span> Startseite</a>
+</header>
+
+<main>
+  <section class="band hell" style="padding-top:clamp(96px,10vw,140px)" aria-labelledby="h-anlass">
+    <div class="innen">
+      <p class="augenbraue">Außerdem</p>
+      <h2 id="h-anlass">Wege für konkrete Anlässe.</h2>
+      <p class="blei">Wenn es bei dir einen bestimmten Auslöser gibt, führt jeder dieser Wege direkt zu seiner eigenen Seite.</p>
+
+      <div class="tueren-liste">
+        <a class="tuer" href="tomo/">
+          <span class="tuer-titel">Eure eigene KI-Lösung: Tomo <span class="chip akzent" style="vertical-align:4px">Neu</span></span>
+          <span class="tuer-text">Vom einzelnen Formular bis zum eigenen lernenden System. Gemeinsam entwickelt, bei euch, für euch.<span class="adresse">tomo.aivantum.com</span></span>
+          <span class="tuer-pfeil" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="tuer" href="https://ai-act.aivantum.com" target="_blank" rel="noopener">
+          <span class="tuer-titel">AI-Act-Fahrplan</span>
+          <span class="tuer-text">Artikel 4 zur KI-Kompetenz gilt seit dem 2.&nbsp;Februar 2025, die Transparenz- und Kennzeichnungspflichten seit dem 2.&nbsp;August 2026. Inventar, Befähigung und Kennzeichnung in einem Durchgang.<span class="adresse">ai-act.aivantum.com</span></span>
+          <span class="tuer-pfeil" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="tuer" href="https://oldschool.aivantum.com" target="_blank" rel="noopener">
+          <span class="tuer-titel">Wissenssicherung</span>
+          <span class="tuer-text">Euer Wiki speichert, was eure Leute wissen, nicht, wie sie entscheiden. Wir holen diesen Teil heraus, bevor der letzte Arbeitstag im Kalender steht.<span class="adresse">oldschool.aivantum.com</span></span>
+          <span class="tuer-pfeil" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="tuer" href="restart/">
+          <span class="tuer-titel">Team im Umbruch</span>
+          <span class="tuer-text">Reorg, neue Rolle, neues Team: sieben Schritte und ein kurzer Selbst-Check, kostenfrei.<span class="adresse">aivantum.com/restart</span></span>
+          <span class="tuer-pfeil" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="tuer" href="entry/">
+          <span class="tuer-titel">Hochschule, Verein, Stiftung</span>
+          <span class="tuer-text">Den Nachwuchs auf das Niveau vorbereiten, das die erste Stelle mit KI heute verlangt.<span class="adresse">aivantum.com/entry</span></span>
+          <span class="tuer-pfeil" aria-hidden="true">&rarr;</span>
+        </a>
+        
+        <div class="tuer tuer-still" id="ibr">
+          <span class="tuer-titel">Sanierungsbericht (IBR)</span>
+          <span class="tuer-text">Wenn die Bank vor der Weiterfinanzierung einen unabhängigen Blick verlangt: Wir haben die Rechenarbeit dahinter automatisiert. Prüfung, Urteil und Unterschrift liegen bei einem Wirtschaftsprüfer.<span class="hier">Wir versprechen nichts, was noch nicht steht.</span></span>
+          <span class="chip">Im Aufbau</span>
+        </div>
+      </div>
+      <p class="fussnote">Organisatorische Compliance-Vorbereitung und betriebswirtschaftliche Aufbereitung. Keine Rechtsberatung, keine Feststellung der Insolvenzreife, kein Testat: Das gehört zu Rechtsanwalt, Steuerberater oder Wirtschaftsprüfer. Bei größeren Vorhaben arbeiten wir mit ausgewählten Partnern, die den gleichen Anspruch haben.</p>
+    </div>
+  </section>
+
+  <section class="band hell-2" id="unterlagen" aria-labelledby="h-unterlagen">
+    <div class="innen">
+      <p class="augenbraue">Zum Weitergeben</p>
+      <h2 id="h-unterlagen">Unterlagen, die du in der Hand behalten kannst.</h2>
+      <p class="blei">Je Einstieg eine Seite: was es ist, wie geliefert wird, was der nächste Schritt ist. Zum Ausdrucken, Weiterleiten, Danebenlegen.</p>
+      <ul class="pdf-liste">
+        <li><a href="https://gallery.aivantum.com/unterlagen/4-diagnostics.pdf" target="_blank" rel="noopener"><b>AI Value Capture Diagnostik</b><span>Vier Ebenen, ein I/O-Strang, ein Live-Dashboard.</span></a></li>
+        <li><a href="https://gallery.aivantum.com/unterlagen/6-team-transformation.pdf" target="_blank" rel="noopener"><b>Team-Transformation</b><span>4 bis 9 Monate Begleitung, bis anderes Arbeiten nicht mehr vom Kalender abhängt.</span></a></li>
+        <li><a href="https://gallery.aivantum.com/unterlagen/5-executive-coaching.pdf" target="_blank" rel="noopener"><b>Executive Coaching</b><span>6 bis 12 Monate, vertraulich. Das Coaching selbst lebt auf coachjay.de.</span></a></li>
+        <li><a href="lage.html"><b>Paper: Die falsch gelesene Lage</b><span>KI-Projekte scheitern selten an der Technik.</span></a></li>
+        <li><a href="fehlermodi.html"><b>Arbeitsunterlage: Deine KI lügt nicht. Sie zeigt ihren Kontext.</b><span>Vier Fehlermodi in sieben Schritten zähmen.</span></a></li>
+      </ul>
+      <p class="fussnote">Auf Anfrage, bewusst nicht im festen Angebot:
+        <a href="https://gallery.aivantum.com/unterlagen/1-konzernfuehrung.pdf" target="_blank" rel="noopener">KI-Workflow-Sprint</a> ·
+        <a href="https://gallery.aivantum.com/unterlagen/2-selbstaendige.pdf" target="_blank" rel="noopener">KI-Workflow-Workshop für Selbständige</a> ·
+        <a href="https://gallery.aivantum.com/unterlagen/3-fuehrungsteams.pdf" target="_blank" rel="noopener">KI-Aktivierungstag fürs Team</a> ·
+        <a href="https://gallery.aivantum.com/unterlagen/7-ai-use-case-canvas.pdf" target="_blank" rel="noopener">KI-Anwendungsfall-Workshop</a>.
+        Alles gesammelt: <a href="https://gallery.aivantum.com" target="_blank" rel="noopener">gallery.aivantum.com</a>.</p>
+      <div class="handlung" style="margin-top:34px">
+        <a class="knopf" href="https://calendar.app.google/VPussJNynjUDuBJFA" target="_blank" rel="noopener">30 Minuten sprechen <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div>© 2026 AIVantum · Jay Manuzon · <a href="mailto:jay@aivantum.com">jay@aivantum.com</a></div>
+  <nav aria-label="Fußnavigation">
+    <a href="index.html">Startseite</a>
+    <a href="https://coachjay.de" target="_blank" rel="noopener">Coaching: coachjay.de</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </nav>
+</footer>
+
+</body>
+</html>
